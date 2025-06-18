@@ -1,0 +1,3112 @@
+@prefix : <https://w3id.org/arco/ontology/construction-description#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix ns: <http://www.w3.org/2006/vcard/ns#> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix cis: <http://dati.beniculturali.it/cis/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix a-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix a-ip: <https://w3id.org/arco/ontology/immovable-property/> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix core: <https://w3id.org/arco/ontology/core/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix opla: <http://ontologydesignpatterns.org/opla/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix a-cat: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix a-con: <https://w3id.org/arco/ontology/construction-description/> .
+@prefix a-loc: <https://w3id.org/arco/ontology/location/> .
+@prefix opla1: <http://www.ontologydesignpatterns.org/opla/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@base <https://w3id.org/arco/ontology/construction-description#> .
+
+<https://w3id.org/arco/ontology/construction-description> rdf:type owl:Ontology ;
+                                                           owl:versionIRI <https://w3id.org/arco/ontology/construction-description/1.1> ;
+                                                           owl:imports <https://w3id.org/arco/ontology/context-description> ,
+                                                                       <https://w3id.org/arco/ontology/denotative-description> ,
+                                                                       <https://w3id.org/arco/ontology/location> ;
+                                                           opla:reusesPatternAsTemplate <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> ,
+                                                                                        <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> ,
+                                                                                        <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> ,
+                                                                                        <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> ;
+                                                           dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+                                                           dct:creator <https://w3id.org/italia/health/data/private-organisation/13866741005> ,
+                                                                       "Aldo Gangemi (ISTC-CNR, STLab)" ,
+                                                                       "Margherita Porena (ISTC-CNR, STLab)" ,
+                                                                       "Maria Chiara Frangipane (ISTC-CNR, STLab)" ,
+                                                                       "Maria Letizia Mancinelli (MiBAC, ICCD)" ,
+                                                                       "Sara D'Abate (Roma3)" ,
+                                                                       "Valentina Presutti (ISTC-CNR, STLab)" ;
+                                                           dct:description "Questo è il modulo della descrizione delle costruzioni. Qui si modellano informazioni, relative al dominio dei beni architettonici. Vengono importati i moduli context description e denotative description."@it ,
+                                                                           "This is the module for the description of constructions, related to architectural heritage domain."@en ;
+                                                           dct:identifier "https://w3id.org/arco/ontology/construction-description" ;
+                                                           dct:issued "2021-04-23" ,
+                                                                      "2021-04-23"^^xsd:date ;
+                                                           dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
+                                                                        <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                                           dct:license <https://creativecommons.org/licenses/by/4.0/> ,
+                                                                       <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                           dct:modified "2025-06-17" ;
+                                                           dct:publisher <https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> ;
+                                                           dct:title "Construction description Ontology (ArCo network)"@en ,
+                                                                     "Ontologia della descrizione delle costruzioni (ArCo network)"@it ;
+                                                           rdfs:comment """Questo è il modulo della descrizione delle costruzioni. Qui si modellano informazioni, relative al dominio dei beni architettonici. 
+In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
+- http://www.ontologydesignpatterns.org/cp/owl/partof.owl
+- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"""@it ,
+                                                                        """This is the module for the description of constructions, related to architectural heritage domain.
+In this module the following Ontology Design Patterns have been used:
+- http://www.ontologydesignpatterns.org/cp/owl/partof.owl
+- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"""@en ;
+                                                           rdfs:label "Construction description Ontology (ArCo network)"@en ,
+                                                                      "Ontologia della descrizione delle costruzioni (ArCo network)"@it ;
+                                                           owl:versionInfo "Version 1.1 - ontology update"@en ,
+                                                                           "Versione 1.1 - aggiornamento dell'ontologia"@it ;
+                                                           dcat:contactPoint <https://w3id.org/arco/resource/contact-point/050ae5d29fc291b682bcf51f1250ca75> ;
+                                                           dcat:keyword "architettura"@it ,
+                                                                        "costruzioni"@it ,
+                                                                        "elementi architettonici"@it ,
+                                                                        "spazi architettonici"@it ,
+                                                                        "sviluppo in alzato"@it ,
+                                                                        "sviluppo in pianta"@it ;
+                                                           dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+                                                           admsapit:acronym "CON" ;
+                                                           admsapit:hasFormalityLevel admsapit:Formal ;
+                                                           admsapit:hasKeyClass a-con:ArchitecturalElement ,
+                                                                                a-con:Construction ,
+                                                                                a-con:ConstructionDevelopment ,
+                                                                                a-con:ConstructionElement ,
+                                                                                a-con:ConstructionSpace ,
+                                                                                <https://w3id.org/italia/health/onto/health-organization/Layout> ;
+                                                           admsapit:hasOntologyLanguage admsapit:OWL ;
+                                                           admsapit:hasSemanticAssetDistribution <https://w3id.org/arco/resource/distribution/CON-RDF-TURTLE> ,
+                                                                                                 <https://w3id.org/arco/resource/distribution/CON-RDF-XML> ;
+                                                           admsapit:hasTask admsapit:AnnotationTask ,
+                                                                            admsapit:QueryFormulationTask ;
+                                                           admsapit:officialURI "https://w3id.org/arco/ontology/construction-description"^^xsd:anyURI ;
+                                                           admsapit:prefix "a-con" ;
+                                                           admsapit:status "published" ;
+                                                           admsapit:target "Cittadini"@it ,
+                                                                           "Imprese"@it ,
+                                                                           "Pubbliche Amministrazioni"@it ;
+                                                           admsapit:type admsapit:DomainOntology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontologydesignpatterns.org/opla/isNativeTo
+opla:isNativeTo rdf:type owl:AnnotationProperty .
+
+
+###  http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate
+opla:reusesPatternAsTemplate rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+dc:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/arco/ontology/catalogue/iccdNormTag
+a-cat:iccdNormTag rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/construction-description/hasArchitecturalOrder
+a-con:hasArchitecturalOrder rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf a-dd:hasTechnicalCharacteristic ;
+                            owl:inverseOf a-con:isArchitecturalOrderOf ;
+                            rdfs:domain a-con:VerticalElement ;
+                            rdfs:range a-con:ArchitecturalOrder ;
+                            rdfs:comment "Questa proprietà collega un'entità all'ordine architettonico."@it ,
+                                         "This property connects an entity to the architectural order."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "ha ordine architettonico"@it ,
+                                       "has architectural order"@en ;
+                            owl:versionInfo "stabile"@en ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasConstructionDevelopment
+a-con:hasConstructionDevelopment rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf a-con:isConstructionDevelopmentOf ;
+                                 rdfs:domain a-con:ConstructionSpace ;
+                                 rdfs:range a-con:ConstructionDevelopment ;
+                                 rdfs:comment "Questa proprietà collega una costruzione allo sviluppo interno ."@it ,
+                                              "This property connects a construction to the internal development."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                 rdfs:label "ha sviluppo della costruzione"@it ,
+                                            "has construction development"@en ;
+                                 owl:versionInfo "stabile"@it ,
+                                                 "stable"@en ;
+                                 a-cat:iccdNormTag "ICCD Normativa A: SI/SII" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasConstructionElement
+a-con:hasConstructionElement rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf core:hasPart ;
+                             owl:inverseOf a-con:isConstructionElementOf ;
+                             rdfs:domain a-con:Construction ;
+                             rdfs:range a-con:ConstructionElement ;
+                             rdfs:comment "Questa proprietà collega una costruzione all'elemento della costruzione."@it ,
+                                          "This property connects a construction to the construction element."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "ha elemento della costruzione"@it ,
+                                        "has construction element"@en ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasConstructionSpace
+a-con:hasConstructionSpace rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf core:hasPart ;
+                           owl:inverseOf a-con:isConstructionSpaceOf ;
+                           rdfs:domain a-con:Construction ;
+                           rdfs:range a-con:ConstructionSpace ;
+                           rdfs:comment "Questa proprietà collega una costruzione ai suoi spazi"@it ,
+                                        "This property relates a construction to its construction space"@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "ha spazio della costruzione"@it ,
+                                      "has construction space"@en ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "ICCD Normativa MA, CA, SI, SAS: DA/SPA" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasCovering
+a-con:hasCovering rdf:type owl:ObjectProperty ;
+                  owl:inverseOf a-con:isCoveringOf ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range a-con:Covering ;
+                  rdfs:comment "Questa proprietà collega un'entità al rivestimento  ."@it ,
+                               "This property connects an entity to a covering ."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "ha rivestimento"@it ,
+                             "has covering"@en ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en ;
+                  a-cat:iccdNormTag "ICCD Normativa: PV e CP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasDesignedFunction
+a-con:hasDesignedFunction rdf:type owl:ObjectProperty ;
+                          owl:inverseOf a-con:isDeignedFunctionOf ;
+                          rdfs:range a-cd:UseFunction .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasDivisoryElement
+a-con:hasDivisoryElement rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf a-con:hasConstructionElement ;
+                         owl:inverseOf a-con:isDivisoryElementOf ;
+                         rdfs:domain a-con:ConstructionSpace ;
+                         rdfs:range a-con:ConstructionElement ;
+                         rdfs:comment "Questa proprietà collega un o spazio ad un elemento divisorio."@it ,
+                                      "This property connects a space to a divisory element."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "ha elemento divisorio"@it ,
+                                    "has divisory element"@en ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasElevationLayout
+a-con:hasElevationLayout rdf:type owl:ObjectProperty ;
+                         owl:inverseOf a-con:isElevationLayoutOf ;
+                         rdfs:domain a-con:ConstructionSpace ;
+                         rdfs:range a-con:ElevationLayout ;
+                         rdfs:comment "Questa proprietà collega uno spazio al suo schema in elevato."@it ,
+                                      "This property connects a space to its elevation layout."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "ha schema in elevato"@it ,
+                                    "has elevation layout"@en ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasExternalCovering
+a-con:hasExternalCovering rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf a-con:hasCovering ;
+                          rdfs:domain owl:Thing .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasFlooringLayout
+a-con:hasFlooringLayout rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf l0:hasDescription ;
+                        owl:inverseOf a-con:isFlooringLayoutOf ;
+                        rdfs:domain a-con:Flooring ;
+                        rdfs:range a-con:FlooringLayout ;
+                        rdfs:comment "Questa proprietà collega la pavimentazione allo schema di posa."@it ,
+                                     "This property connects the flooring to the flooring layout."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "ha schema di posa"@it ,
+                                   "has flooring layout"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag "Normativa A: PV/PVM/PVMS" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasInternalCovering
+a-con:hasInternalCovering rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf a-con:hasCovering .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasLayout
+a-con:hasLayout rdf:type owl:ObjectProperty ;
+                owl:inverseOf a-con:isLayoutOf ;
+                rdfs:domain owl:Thing ;
+                rdfs:range a-con:Layout ;
+                rdfs:comment "Questa proprietà collega il design allo schema iconografico."@it ,
+                             "This property connects the design to the layout."@en ;
+                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                rdfs:label "has layout"@en ;
+                owl:versionInfo "stabile"@it ,
+                                "stable"@en ;
+                a-cat:iccdNormTag "Normativa A: PN/PNT/PNTS e PN/PNT/PNTF" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasModeOfIrrigation
+a-con:hasModeOfIrrigation rdf:type owl:ObjectProperty ;
+                          owl:inverseOf a-con:isModeOfIrrigationOf ;
+                          rdfs:domain a-con:WaterSystem ;
+                          rdfs:range a-con:ModeOfIrrigation ;
+                          rdfs:comment "This property connects a water system to the mode of irrigation."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "ha modalità di irrigazione"@it ,
+                                     "has mode of irrigation"@en ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en ;
+                          a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasModeOfSuperelevation
+a-con:hasModeOfSuperelevation rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasNaturalElement
+a-con:hasNaturalElement rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf core:hasPart ;
+                        owl:inverseOf a-con:isNaturalElementOf ;
+                        rdfs:domain a-con:Construction ;
+                        rdfs:range a-con:NaturalElement ;
+                        rdfs:comment "Questa proprietà collega una costruzione a un elemento naturale"@en ,
+                                     "This property relates a construction with a natural element"@en ;
+                        rdfs:label "ha elemento naturale"@it ,
+                                   "has natural element"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag <https://w3id.org/arco/ontology/construction-description> .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasOpeningSystem
+a-con:hasOpeningSystem rdf:type owl:ObjectProperty ;
+                       owl:inverseOf a-con:isOpeningSystemOf ;
+                       rdfs:domain a-con:OpeningElement ;
+                       rdfs:range a-con:OpeningSystem ;
+                       rdfs:comment "Questa proprietà collega una porta o una finestra al sistema di apertura."@it ,
+                                    "This property connects a door or a window to the opening system."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "ha sistema di apertura"@it ,
+                                  "has opening system"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasPlanLayout
+a-con:hasPlanLayout rdf:type owl:ObjectProperty ;
+                    owl:inverseOf a-con:isPlanLayoutOf ;
+                    rdfs:domain a-con:ConstructionSpace ;
+                    rdfs:range a-con:PlanLayout ;
+                    rdfs:comment "Questa proprietà collega uno spazio al suo schema in pianta."@it ,
+                                 "This property connects a space to its plan layout."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "ha schema in pianta"@it ,
+                               "has plan layout"@en ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasPositionOnCeilingLevel
+a-con:hasPositionOnCeilingLevel rdf:type owl:ObjectProperty ;
+                                owl:inverseOf a-con:isPositionOnCeilingLevelOf ;
+                                rdfs:domain l0:Object ;
+                                rdfs:range a-con:PositionOnCeilingLevel ;
+                                rdfs:comment "Questa proprietà rappresenta la posizione di una costruzione rispetto all altezza del soffitto."@it ,
+                                             "This property represents the position of a construction referred to the ceiling level."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                rdfs:label "ha posizione su livello del soffitto"@it ,
+                                           "has position on ceiling level"@en ;
+                                owl:versionInfo "stabile"@it ,
+                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasPositionOnGroundLevel
+a-con:hasPositionOnGroundLevel rdf:type owl:ObjectProperty ;
+                               owl:inverseOf a-con:isPositionOnGroundLevelOf ;
+                               rdfs:domain l0:Object ;
+                               rdfs:range a-con:PositionOnGroundLevel ;
+                               rdfs:comment "Questa proprietà rappresenta la posizione di una costruzione rispetto al terreno."@it ,
+                                            "This property represents the position of a construction referred to the ground level."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                               rdfs:label "ha posizione su livello del terreno"@it ,
+                                          "has position on groung level"@en ;
+                               owl:versionInfo "stabile"@it ,
+                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasPreviousStructureOrElement
+a-con:hasPreviousStructureOrElement rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf core:hasPart ;
+                                    owl:inverseOf a-con:isPreviousStructureOrElementOf ;
+                                    rdfs:domain a-con:Construction ;
+                                    rdfs:range a-con:Construction ;
+                                    rdfs:comment "This property relates a construction with its previous construction or element"@en ,
+                                                 "questa proprietà collega una costruzione a un suo precedente elemento o costruzione"@it ;
+                                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                    rdfs:label "ha elemento o costruzione precedente"@it ,
+                                               "has previous construction or element"@en ;
+                                    owl:versionInfo "stabile"@it ,
+                                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasProjectionElement
+a-con:hasProjectionElement rdf:type owl:ObjectProperty ;
+                           rdfs:domain a-con:Wall ;
+                           rdfs:range a-con:ArchitecturalElement ;
+                           rdfs:comment """Questa relazione collega un muro agli elementi dell’ordine architettonico  proiettati di su di esso. 
+Per esempio: paraste, semicolonne, colonne alveolate, colonne addossate collegate da archi, trabeazione, ecc."""@it ,
+                                        """This property relates a wall to the elements of the architectural order projected onto it. 
+E.g.: pilasters, half-columns, connected by arches, etc."""@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "ha elemento di proiezione"@it ,
+                                      "has projection element"@en ;
+                           owl:versionInfo "instabile"@it ,
+                                           "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasRoofStructure
+a-con:hasRoofStructure rdf:type owl:ObjectProperty ;
+                       owl:inverseOf a-con:isRoofStructureOf ;
+                       rdfs:domain a-con:Roof ;
+                       rdfs:range a-con:RoofStructure ;
+                       rdfs:comment "Questa proprietà collega la copertura alla sua struttura."@it ,
+                                    "This property connects a roof to its structure."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "ha struttura del tetto"@it ,
+                                  "has roof structure"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en ;
+                       a-cat:iccdNormTag "Normativa A: CP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasShadingDevice
+a-con:hasShadingDevice rdf:type owl:ObjectProperty ;
+                       owl:inverseOf a-con:isShadingDeviceOf ;
+                       rdfs:domain a-con:Window ;
+                       rdfs:range a-con:ShadingDevice ;
+                       rdfs:comment "Questa proprietà collega la finestra al sistema di ombreggiatura."@it ,
+                                    "This property connects a window to the shading device."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "ha sistema di ombreggiatura"@it ,
+                                  "has shading device"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasSubfloor
+a-con:hasSubfloor rdf:type owl:ObjectProperty ;
+                  rdfs:domain a-con:Flooring ;
+                  rdfs:range a-con:Subfloor ;
+                  rdfs:comment "Questa proprietà collega la pavimentazione di una costruzione con il sottofondo sottostante."@it ,
+                               "This property relates the flooring of a construction to its underlying subfloor."@it ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "ha sottofondo"@it ,
+                             "has subfloor"@en ;
+                  owl:versionInfo "instabile"@it ,
+                                  "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasTechnicalSystem
+a-con:hasTechnicalSystem rdf:type owl:ObjectProperty ;
+                         owl:inverseOf a-con:isTechnicalSystemOf ;
+                         rdfs:domain a-con:Construction ;
+                         rdfs:range a-con:TechnicalSystem ;
+                         rdfs:comment "Questa proprietà collega una costruzione all'impianto tecnico."@it ,
+                                      "This property connects a costruction to the technical system."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "ha impianto tecnico"@it ,
+                                    "has technical system"@en ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en ;
+                         a-cat:iccdNormTag "Normativa PG: IM/IMP/IMPT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterAvailability
+a-con:hasWaterAvailability rdf:type owl:ObjectProperty ;
+                           owl:inverseOf a-con:isWaterAvailabilityOf ;
+                           rdfs:domain a-con:WaterSystem ;
+                           rdfs:range a-con:WaterAvailability ;
+                           rdfs:comment "Questa proprietà collelga l'impianto idrico alla disponibilità idrica."@it ,
+                                        "This property connects a water system to the water availability."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "ha disponibilità idrica"@it ,
+                                      "has water availability"@en ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterDistribution
+a-con:hasWaterDistribution rdf:type owl:ObjectProperty ;
+                           owl:inverseOf a-con:isWaterDistributionOf ;
+                           rdfs:domain a-con:WaterSystem ;
+                           rdfs:range a-con:WaterDistribution ;
+                           rdfs:comment "Questa proprietà collelga l'impianto idrico al tipo di distribuzione idrica."@it ,
+                                        "This property connects a water system to the water distribution type."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "ha tipo di distribuzione idrica"@it ,
+                                      "has water distribution type"@en ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterElement
+a-con:hasWaterElement rdf:type owl:ObjectProperty ;
+                      owl:inverseOf a-con:isWaterElementOf ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range a-con:WaterElement ;
+                      rdfs:comment "Questa proprietà collelga l'impianto idrico al l'elemento idrico (."@it ,
+                                   "This property connects a water system to the water element."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "ha elemento idrico"@it ,
+                                 "has water element"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en ;
+                      a-cat:iccdNormTag "Normativa PG: FO/FOT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/hasWaterSystem
+a-con:hasWaterSystem rdf:type owl:ObjectProperty ;
+                     owl:inverseOf a-con:isWaterSystemOf ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range a-con:WaterSystem ;
+                     rdfs:comment "Questa proprietà collega un ambiente naturale con il suo sistema delle acque."@it ,
+                                  "This property relates a natural environment with its water system."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "ha sistema delle acque"@it ,
+                                "has water system"@en ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isArchitecturalOrderOf
+a-con:isArchitecturalOrderOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf a-dd:isTechnicalCharacteristicOf ;
+                             rdfs:domain a-con:ArchitecturalOrder ;
+                             rdfs:range a-con:VerticalElement ;
+                             rdfs:comment "Questa proprietà collega l'ordine architettonico ad un'entità."@it ,
+                                          "This property connects the architectural order to an entity."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "is architectural order"@en ,
+                                        "è ordine architettonico di"@it ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isConstructionDevelopmentOf
+a-con:isConstructionDevelopmentOf rdf:type owl:ObjectProperty ;
+                                  rdfs:domain a-con:ConstructionDevelopment ;
+                                  rdfs:range a-con:ConstructionSpace ;
+                                  rdfs:comment "Questa proprietà collega lo sviluppo della costruzione alla costruzione."@it ,
+                                               "This property connects the construction development to a construction."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                  rdfs:label "is construction development of"@en ,
+                                             "è sviluppo della costruzione di"@it ;
+                                  owl:versionInfo "stabile"@it ,
+                                                  "stable"@en ;
+                                  a-cat:iccdNormTag "ICCD Normativa A: SI/SII" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isConstructionElementOf
+a-con:isConstructionElementOf rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf core:isPartOf ;
+                              rdfs:domain a-con:ConstructionElement ;
+                              rdfs:range a-con:Construction ;
+                              rdfs:comment "Questa proprietà collega un elemento della costruzione ad una costruzione."@it ,
+                                           "This property connects a construction element to a construction."@en ;
+                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                              rdfs:label "is construction element of"@en ,
+                                         "è elemento della costruzione"@it ;
+                              owl:versionInfo "stabile"@it ,
+                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isConstructionSpaceOf
+a-con:isConstructionSpaceOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf core:isPartOf ;
+                            rdfs:domain a-con:ConstructionSpace ;
+                            rdfs:range a-con:Construction ;
+                            rdfs:comment "Questa propietà collega lo spazio alla costruzione di cui fa parte"@it ,
+                                         "This property relates a construction space to its constrution"@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "is construction space of"@en ,
+                                       "è spazio della costruzione"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isCoveringOf
+a-con:isCoveringOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain a-con:Covering ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( a-con:Construction
+                                              a-con:ConstructionPart
+                                            )
+                              ] ;
+                   rdfs:comment "Questa proprietà collega un rivestimento ad una costruzione ."@it ,
+                                "This property connects a covering to a construction."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "is covering of"@en ,
+                              "è rivestimento di"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en ;
+                   a-cat:iccdNormTag "ICCD Normativa: PV e CP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isDeignedFunctionOf
+a-con:isDeignedFunctionOf rdf:type owl:ObjectProperty ;
+                          rdfs:domain a-cd:UseFunction .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isDivisoryElementOf
+a-con:isDivisoryElementOf rdf:type owl:ObjectProperty ;
+                          rdfs:domain a-con:ConstructionElement ;
+                          rdfs:range a-con:ConstructionSpace ;
+                          rdfs:comment "Questa proprietà collega un elemento divisorio ad uno spazio."@it ,
+                                       "This property connects a divisory element to a space."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "is divisory element of"@en ,
+                                     "è elemento divisorio di"@it ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isElevationLayoutOf
+a-con:isElevationLayoutOf rdf:type owl:ObjectProperty ;
+                          rdfs:domain a-con:ElevationLayout ;
+                          rdfs:range a-con:ConstructionSpace ;
+                          rdfs:comment "Questa proprietà è inversa di ha schema in elevato."@it ,
+                                       "This property is the inverse of has elevation layout."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "is elevation layout of"@en ,
+                                     "è schema in elevato di"@it ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isFlooringLayoutOf
+a-con:isFlooringLayoutOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf l0:isDescriptionOf ;
+                         rdfs:domain a-con:FlooringLayout ;
+                         rdfs:range a-con:Flooring ;
+                         rdfs:comment "Questa proprietà collega lo schema di posa alla pavimentazione."@it ,
+                                      "This property connects the flooring layout to a flooring."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "is flooring layout of"@en ,
+                                    "è schema di posa di"@it ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en ;
+                         a-cat:iccdNormTag "Normativa A: PV/PVM/PVMS" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isLayoutOf
+a-con:isLayoutOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain a-con:Layout ;
+                 rdfs:range owl:Thing ;
+                 rdfs:comment "Questa proprietà collega lo schema iconografico al progetto."@it ,
+                              "This property connects the layout to a design."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "is layout of"@en ,
+                            "è schema iconografico di"@it ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en ;
+                 a-cat:iccdNormTag "Normativa A: PN/PNT/PNTS e PN/PNT/PNTF" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isModeOfIrrigationOf
+a-con:isModeOfIrrigationOf rdf:type owl:ObjectProperty ;
+                           rdfs:domain a-con:ModeOfIrrigation ;
+                           rdfs:range a-con:WaterSystem ;
+                           rdfs:comment "Questa proprietà collelga la modalità di irrigazione all'impianto idrico"@it ,
+                                        "This property connects the mode of irrigation to a water system."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "is mode of irrigation of"@en ,
+                                      "è modalità di irrigazione di"@it ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isNaturalElementOf
+a-con:isNaturalElementOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf core:isPartOf ;
+                         rdfs:domain a-con:NaturalElement ;
+                         rdfs:range a-con:ConstructionElement ;
+                         rdfs:comment "Questa proprietà collega un elemento naturale con un elemento di costruzione."@it ,
+                                      "This property relates a natural element to its construction element."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "is natural element of"@en ,
+                                    "è elemento naturale di"@en ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isOpeningSystemOf
+a-con:isOpeningSystemOf rdf:type owl:ObjectProperty ;
+                        rdfs:domain a-con:OpeningSystem ;
+                        rdfs:comment "Questa proprietà collega il sistema di apertura ad una porta o una finestra."@it ,
+                                     "This property connects the opening system t0 a door or a window."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "is opening system of"@en ,
+                                   "è sistema di apertura di"@it ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isPlanLayoutOf
+a-con:isPlanLayoutOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain a-con:PlanLayout ;
+                     rdfs:range a-con:ConstructionSpace ;
+                     rdfs:comment "Questa proprietà è inversa di ha schema in pianta."@it ,
+                                  "This property is the inverse of has plan layout."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "is plan layout of"@en ,
+                                "è schema in pianta di"@it ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isPositionOnCeilingLevelOf
+a-con:isPositionOnCeilingLevelOf rdf:type owl:ObjectProperty ;
+                                 rdfs:domain a-con:PositionOnCeilingLevel ;
+                                 rdfs:range l0:Object ;
+                                 rdfs:comment "Questa proprietà è inversa alla posizione sul livello del soffitto."@it ,
+                                              "This property in inverse of has position on ceiling level."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                 rdfs:label "is position on ceiling level of"@en ,
+                                            "è posizione su livello del soffitto di"@it ;
+                                 owl:versionInfo "stabile"@it ,
+                                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isPositionOnGroundLevelOf
+a-con:isPositionOnGroundLevelOf rdf:type owl:ObjectProperty ;
+                                rdfs:domain a-con:PositionOnGroundLevel ;
+                                rdfs:range l0:Object ;
+                                rdfs:comment "Questa proprietà è inversa alla posizione sul livello del terreno."@it ,
+                                             "This property in inverse of has position on ground level."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                rdfs:label "is position on ground level of"@en ,
+                                           "è posizione su livello del terreno di"@it ;
+                                owl:versionInfo "stabile"@it ,
+                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isPreviousStructureOrElementOf
+a-con:isPreviousStructureOrElementOf rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf core:isPartOf ;
+                                     rdfs:domain a-con:Construction ;
+                                     rdfs:range a-con:Construction ;
+                                     rdfs:comment "Questa proprietà collega un precedente elemento o struttura architettonica con quella attuale."@it ,
+                                                  "This property relates a previous structure or element to the actual structure or element ."@en ;
+                                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                     rdfs:label "is previous structure or element of"@en ,
+                                                "è struttura o elemento precedente di"@it ;
+                                     owl:versionInfo "stabile"@it ,
+                                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isRoofStructureOf
+a-con:isRoofStructureOf rdf:type owl:ObjectProperty ;
+                        rdfs:domain a-con:RoofStructure ;
+                        rdfs:range a-con:Roof ;
+                        rdfs:comment "Questa proprietà collega la struttura della copertura alla copertura."@it ,
+                                     "This property connects the roof structure to a roof."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "is roof structure of"@en ,
+                                   "è struttura del tetto di"@it ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isShadingDeviceOf
+a-con:isShadingDeviceOf rdf:type owl:ObjectProperty ;
+                        rdfs:domain a-con:ShadingDevice ;
+                        rdfs:range a-con:Window ;
+                        rdfs:comment "Questa proprietà collega il sistema di ombreggiatura alla finestra."@it ,
+                                     "This property connects the shading device to a window."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "is shading device of"@en ,
+                                   "è sistema di ombreggiatura di"@it ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isSoilOccupiedBy
+a-con:isSoilOccupiedBy rdf:type owl:ObjectProperty ;
+                       owl:inverseOf a-con:laysOnSoil ;
+                       rdfs:domain a-loc:Soil ;
+                       rdfs:range owl:Thing ;
+                       rdfs:comment "Questa proprietà collega il terreno ad una cosa."@it ,
+                                    "This property connects the soil to a thing."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "is soil occupied by"@en ,
+                                  "è terreno di appoggio di"@it ;
+                       owl:deprecated "true"^^xsd:boolean ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en ;
+                       core:replacedBy <https://w3id.org/arco/ontology/arco-lite/isSoilOccupiedBy> .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isTechnicalSystemOf
+a-con:isTechnicalSystemOf rdf:type owl:ObjectProperty ;
+                          rdfs:domain a-con:TechnicalSystem ;
+                          rdfs:range a-con:Construction ;
+                          rdfs:comment "Questa proprietà collega l'impianto tecnico ad una costruzione."@it ,
+                                       "This property connects the technical system to a costruction."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "is technical system of"@en ,
+                                     "è impianto tecnico di"@it ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en ;
+                          a-cat:iccdNormTag "Normativa PG: IM/IMP/IMPT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isWaterAvailabilityOf
+a-con:isWaterAvailabilityOf rdf:type owl:ObjectProperty ;
+                            rdfs:domain a-con:WaterAvailability ;
+                            rdfs:range a-con:WaterSystem ;
+                            rdfs:comment "Questa proprietà collelga la disponibilità idrica all'impianto idrico"@it ,
+                                         "This property connects a water availability to the water system."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "is water availability of"@en ,
+                                       "è disponibilità idrica di"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en ;
+                            a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isWaterDistributionOf
+a-con:isWaterDistributionOf rdf:type owl:ObjectProperty ;
+                            rdfs:domain a-con:WaterDistribution ;
+                            rdfs:range a-con:WaterSystem ;
+                            rdfs:comment "Questa proprietà collelga il tipo di distribuzione idrica all'impianto idrico"@it ,
+                                         "This property connects the water distribution type to a water system."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "is water distribution type of"@en ,
+                                       "è tipo di distribuzione idrica di"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en ;
+                            a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isWaterElementOf
+a-con:isWaterElementOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain a-con:WaterElement ;
+                       rdfs:range owl:Thing ;
+                       rdfs:comment "Questa proprietà collelga l'elemento idrico all'impianto idrico."@it ,
+                                    "This property connects a water element to the water system."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "is water element of"@en ,
+                                  "è elemento idrico di"@it ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en ;
+                       a-cat:iccdNormTag "Normativa PG: FO/FOT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isWaterSystemOf
+a-con:isWaterSystemOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range a-con:WaterSystem ;
+                      rdfs:comment "Questa proprietà collega un sistema delle acque al suo ambiente naturale."@it ,
+                                   "This property relates the water system of a natural environment with its natural environment."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/contruction-description> ;
+                      rdfs:label "is water system of"@en ,
+                                 "è sistema delle acque di"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/laysOn
+a-con:laysOn rdf:type owl:ObjectProperty ;
+             rdfs:domain a-con:HorizontalElement ;
+             rdfs:range a-con:VerticalElement ;
+             rdfs:comment "Questa proprietà collega un elemento architettonico orizzontale all'elemento verticale su cui poggia. Per esempio: una volta che poggia su pilastri." ;
+             rdfs:label "lays on"@en ,
+                        "poggia su"@it .
+
+
+###  https://w3id.org/arco/ontology/construction-description/laysOnSoil
+a-con:laysOnSoil rdf:type owl:ObjectProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range a-loc:Soil ;
+                 rdfs:comment "Questa proprietà collega le fondazioni al terreno."@it ,
+                              "This property connects the foundation to the soil."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "ha terreno di appoggio"@it ,
+                            "lays on soil"@en ;
+                 owl:deprecated "true"^^xsd:boolean ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en ;
+                 core:replacedBy <https://w3id.org/arco/ontology/arco-lite/laysOnSoil> .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasAuthor
+a-cd:hasAuthor rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/context-description/hasUseFunction
+a-cd:hasUseFunction rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasColour
+a-dd:hasColour rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasMaterial
+a-dd:hasMaterial rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasOrientation
+a-dd:hasOrientation rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasShape
+a-dd:hasShape rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic
+a-dd:hasTechnicalCharacteristic rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/hasTechnique
+a-dd:hasTechnique rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf
+a-dd:isTechnicalCharacteristicOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/arco/ontology/arco/numberOfElements
+arco:numberOfElements rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf arco:numberOfParts ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain l0:Object ;
+                      rdfs:range xsd:positiveInteger ;
+                      rdfs:comment "Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi."@it ,
+                                   "This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/arco> ;
+                      rdfs:label "number of elements"@en ,
+                                 "numero di elementi"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en ;
+                      a-cat:iccdNormTag "ICCD Normativa Trasversale 4.00: OG/QNT/QNTI; OG/QNT/QNTS" .
+
+
+###  https://w3id.org/arco/ontology/arco/numberOfParts
+arco:numberOfParts rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/arco/ontology/construction-description/apsidalTermination
+a-con:apsidalTermination rdf:type owl:DatatypeProperty ;
+                         rdfs:domain a-con:ConstructionSpace ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:comment "Questa proprietà indica se uno spazio ha una terminazione absidata."@it ,
+                                      "This property indicates if a space has an apsidal termination."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "apsidal termination"@en ,
+                                    "teminazione absidata"@it ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/auxiliaryStructuralElement
+a-con:auxiliaryStructuralElement rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain a-con:ArchitecturalElement ;
+                                 rdfs:range xsd:boolean ;
+                                 rdfs:comment "Questa proprietà indica se un elemento architettonico è anche strutturale sussidiario."@it ,
+                                              "This property indicates if an architectural element is an auxiliary structural element."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                 rdfs:label "auxiliary structural element"@en ,
+                                            "elemento strutturale sussidiario"@it ;
+                                 owl:versionInfo "stabile"@it ,
+                                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/bayPartitionRatio
+a-con:bayPartitionRatio rdf:type owl:DatatypeProperty ;
+                        rdfs:domain a-con:PlanimetricDevelopment ;
+                        rdfs:range rdfs:Literal ;
+                        rdfs:comment "Questa proprietà descrive il rapporto dimensionale tra le campate di una singola navata. Es: \"1/2\", \"1/1/2\", ecc"@it ,
+                                     "This property describes the dimensional ratio between the bays of a single aisle. E.g.: ‘1/2’, ‘1/1/2’, etc." ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Bay partition ratio"@en ,
+                                   "Rapporto dimensionale delle campate"@it ;
+                        owl:versionInfo "instabile"@it ,
+                                        "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/differenceInHeight
+a-con:differenceInHeight rdf:type owl:DatatypeProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( a-con:Ramp
+                                                     a-con:Stairs
+                                                   )
+                                     ] ;
+                         rdfs:range xsd:positiveInteger ;
+                         rdfs:comment "Questa proprietà rappresenta la differenza di altezza di un oggetto."@it ,
+                                      "This property represents the difference in height of an object."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "difference in height"@en ,
+                                    "differenza di altezza"@it ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/encastrated
+a-con:encastrated rdf:type owl:DatatypeProperty ;
+                  rdfs:domain a-con:Beam ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Questa proprietà indica se la trave è a incastro."@it ,
+                               "This property rindicates if a beam is encastrated."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "a incastro"@it ,
+                             "encastrated"@en ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/exposed
+a-con:exposed rdf:type owl:DatatypeProperty ;
+              rdfs:domain a-con:ArchitecturalElement ;
+              rdfs:range xsd:boolean ;
+              rdfs:comment "Questa proprietà indica se un elemento architettonico è a vista."@it ,
+                           "This property rindicates if an architectural element is exposed."@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "a vista"@it ,
+                         "exposed"@en ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/exterior
+a-con:exterior rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Questa proprietà indica un elemento della costruzione esterno."@it ,
+                            "This property represents the exterior element of a construction."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "esterno"@it ,
+                          "exterior"@en ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/fanlightPresence
+a-con:fanlightPresence rdf:type owl:DatatypeProperty ;
+                       rdfs:domain a-con:Window ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:comment "Questa proprietà indica la presenza di un sopraluce sopra la porta."@it ,
+                                    "This property indicates the presence of a fanlight on the door."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "fanlight presence"@en ,
+                                  "presenza del sopraluce"@it ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/interior
+a-con:interior rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Questa proprietà rappresenta l'interno di una costruzione."@it ,
+                            "This property represents the interior element of a construction."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "interior"@en ,
+                          "interno"@it ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/isolatedElementOrSpace
+a-con:isolatedElementOrSpace rdf:type owl:DatatypeProperty ;
+                             rdfs:domain a-con:Construction ;
+                             rdfs:range xsd:boolean ;
+                             rdfs:comment "Questa proprietà indica se la costruzione (spazio o elemtno) è isolata"@it ,
+                                          "This property indicates whether the construction (space or element) is isolated"@en ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "elemento o spazio isolato"@it ,
+                                        "isolated element or space"@en ,
+                                        "isolatedElementOrSpace"@en ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/jutting
+a-con:jutting rdf:type owl:DatatypeProperty ;
+              rdfs:domain a-con:Construction ;
+              rdfs:range xsd:boolean ;
+              rdfs:comment "Questa proprietà indica se la costruzione è estradossata"@it ,
+                           "This property indicates whether the construction is jutting"@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "estradossato"@it ,
+                         "jutting"@en ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/loadBearing
+a-con:loadBearing rdf:type owl:DatatypeProperty ;
+                  rdfs:domain a-con:VerticalElement ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Questa proprietà indica se un elemento verticale è portante."@it ,
+                               "This property represents a load bearing vertical element."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "load bearing"@en ,
+                             "portante"@it ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/mainFacade
+a-con:mainFacade rdf:type owl:DatatypeProperty ;
+                 rdfs:domain a-con:EnclosingElement ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "Questa proprietà indica se la facciata di un edificio è quella principale."@it ,
+                              "This property indicates if the facade of a construction is the main one."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "facciata principale"@it ,
+                            "main facade"@en ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/navesOrAislesPartitionRatio
+a-con:navesOrAislesPartitionRatio rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain a-con:PlanimetricDevelopment ;
+                                  rdfs:range rdfs:Literal ;
+                                  rdfs:comment "Questa proprietà indica il rapporto dimensionale tra le navate."@it ,
+                                               "This property indicates the nave or aisle partition ratio."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                  rdfs:label "naves or aisles partition ratio"@en ,
+                                             "rapporto dimensionale tra le navate"@it ;
+                                  owl:versionInfo "stabile"@it ,
+                                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfBays
+a-con:numberOfBays rdf:type owl:DatatypeProperty ;
+                   rdfs:domain a-con:PlanimetricDevelopment ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "Questa proprietà rappresenta il numero campate."@it ,
+                                "This property represents the number of bays."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "number of bays"@en ,
+                              "numero di campate"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfChapels
+a-con:numberOfChapels rdf:type owl:DatatypeProperty ;
+                      rdfs:domain a-con:PlanimetricDevelopment ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Questa proprietà rappresenta il numero cappelle."@it ,
+                                   "This property represents the number of chapels."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "number of chapels"@en ,
+                                 "numero di cappelle"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfFlights
+a-con:numberOfFlights rdf:type owl:DatatypeProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( a-con:Ramp
+                                                  a-con:Stairs
+                                                )
+                                  ] ;
+                      rdfs:range xsd:positiveInteger ;
+                      rdfs:comment "Questa proprietà rappresenta il numero di rampe di una connessione verticale."@it ,
+                                   "This property represents the number of flights of a vertical connection."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "number of flights"@en ,
+                                 "numero delle rampe"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfFloors
+a-con:numberOfFloors rdf:type owl:DatatypeProperty ;
+                     rdfs:domain a-con:Building ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:comment "Questa proprietà rappresenta  il numero di piani di un edificio."@it ,
+                                  "This property represents the number of floors of a building."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "numbero of floors"@en ,
+                                "numero di piani"@it ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfLandings
+a-con:numberOfLandings rdf:type owl:DatatypeProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( a-con:Ramp
+                                                   a-con:Stairs
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:positiveInteger ;
+                       rdfs:comment "Questa proprietà rappresenta il numero di pianerottoli di una connessione verticale."@it ,
+                                    "This property represents the number of landings of a vertical connection."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "number of landings"@en ,
+                                  "numero dei pianerottoli"@it ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfNaveOrAisle
+a-con:numberOfNaveOrAisle rdf:type owl:DatatypeProperty ;
+                          rdfs:domain a-con:PlanimetricDevelopment ;
+                          rdfs:range xsd:integer .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfNavesOrAisles
+a-con:numberOfNavesOrAisles rdf:type owl:DatatypeProperty ;
+                            rdfs:domain a-con:PlanimetricDevelopment ;
+                            rdfs:range xsd:integer ;
+                            rdfs:comment "Questa proprietà rappresenta il numero di navate."@it ,
+                                         "This property represents the number of naves or aisles."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "number of naves or aisles"@en ,
+                                       "numero delle navate"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfPanels
+a-con:numberOfPanels rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:positiveInteger ;
+                     rdfs:comment "Questa proprietà rappresenta il numero di panneli di una porta o di una finestra."@it ,
+                                  "This property represents the number of panels of a door or of a window."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "number of panels"@en ,
+                                "numero dei pannelli"@it ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfRegisters
+a-con:numberOfRegisters rdf:type owl:DatatypeProperty ;
+                        rdfs:domain a-con:ElevationDevelopment ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "Questa proprietà rappresenta il numero dei registri."@it ,
+                                     "This property represents the number of registers."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "number of registers"@en ,
+                                   "numero delle registri"@it ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfRises
+a-con:numberOfRises rdf:type owl:DatatypeProperty ;
+                    rdfs:domain a-con:Stairs ;
+                    rdfs:range xsd:nonPositiveInteger ;
+                    rdfs:comment "Questa proprietà rappresenta il numero di alzate di una scala."@it ,
+                                 "This property represents the number of rises of a stair."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "number of rises"@en ,
+                               "numero delle alzate"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/numberOfRooms
+a-con:numberOfRooms rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( a-con:Building
+                                                a-con:Floor
+                                              )
+                                ] ;
+                    rdfs:range xsd:positiveInteger ;
+                    rdfs:comment "Questa proprietà rappresenta il numero di stanze di un edificio."@it ,
+                                 "This property represents the number of rooms of a building."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "numbero of rooms"@en ,
+                               "numero di stanze"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/originalElement
+a-con:originalElement rdf:type owl:DatatypeProperty ;
+                      rdfs:domain a-con:ConstructionElement ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Questa proprietà indica se un elemento della costruzione è originale."@it ,
+                                   "This property represents a original construction element."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "elemento originale"@it ,
+                                 "original element"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/overlooking
+a-con:overlooking rdf:type owl:DatatypeProperty ;
+                  rdfs:domain a-con:EnclosingElement ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "Questa propiretà indica l'affaccio della facciata dell'edificio che si sta descrivendo"@it ,
+                               "This property relates a facade with the view it overlooks."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "affaccio"@it ,
+                             "overlooking"@en ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en ;
+                  a-cat:iccdNormTag "Normativa ICCD A: UB/UBV/UBVD (+ UBVN), UBVK (+ UBVL)" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/refersToFloorOrLevel
+a-con:refersToFloorOrLevel rdf:type owl:DatatypeProperty ;
+                           rdfs:domain a-con:Construction ;
+                           rdfs:range xsd:decimal ;
+                           rdfs:comment """Questa proprietà rappresenta il piano o la quota (m., cm.) del livello a cui si riferisce la pianta che
+viene descritta."""@it ,
+                                        "This property represents the floor or the quote of the construction design."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "refers to floor or level"@en ,
+                                      "riferimento a piano o quota"@it ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "PN/PNT/PNTQ" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/significantIconographicInformation
+a-con:significantIconographicInformation rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain a-con:Construction ;
+                                         rdfs:range rdfs:Literal ;
+                                         rdfs:comment "Questa proprietà rappresenta la presenza e il numero di eventuali elementi icnografici significativi."@it ,
+                                                      "This property represents iconographic information about the construction design."@en ;
+                                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                         rdfs:label "informazioni iconografiche significative"@it ,
+                                                    "significant iconographic information"@en ;
+                                         owl:versionInfo "stabile"@it ,
+                                                         "stable"@en ;
+                                         a-cat:iccdNormTag "PN/PNT/PNTE" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/spatialLocation
+a-con:spatialLocation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain l0:Object ;
+                      rdfs:range rdfs:Literal ;
+                      rdfs:comment "Questa proprietà rappresenta la collocazione delle scale in rapporto alla tipologia dell'edificio."@it ,
+                                   "This property represents the spatial location of a stair."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "riferimento spaziale"@it ,
+                                 "spatial location"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/symmetrical
+a-con:symmetrical rdf:type owl:DatatypeProperty ;
+                  rdfs:domain l0:Object ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Questa proprietà indica se la costruzione è simmetrica"@it ,
+                               "This property indicates whether the construction is symmetrical"@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "simmetrica"@it ,
+                             "symmetrical"@en ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/transeptPrecence
+a-con:transeptPrecence rdf:type owl:DatatypeProperty ;
+                       rdfs:domain a-con:PlanimetricDevelopment ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:comment "Questa proprietà indica se è presente un transetto"@it ,
+                                    "This property indicates whether there is a transept"@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "presenza del transetto"@en ,
+                                  "transept presente"@it ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/withoutOpening
+a-con:withoutOpening rdf:type owl:DatatypeProperty ;
+                     rdfs:domain a-con:Construction ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "Questa proprietà rappresenta una costruzione cieca"@it ,
+                                  "This property represents a construction without openings"@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "cieca"@it ,
+                                "cieco"@it ,
+                                "withoutOpening"@en ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalAssembly
+a-con:ArchitecturalAssembly rdf:type owl:Class ;
+                            rdfs:subClassOf a-con:ArchitecturalElement ,
+                                            l0:Collection ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty core:hasType ;
+                                              owl:allValuesFrom a-con:ArchitecturalAssemblyType
+                                            ] ;
+                            rdfs:comment "Questa classe rappresenta un insieme di elementi architettonici."@it ,
+                                         "This class represents the architectural assembly."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Architectural assembly"@en ,
+                                       "Elemento architettonico"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalAssemblyType
+a-con:ArchitecturalAssemblyType rdf:type owl:Class ;
+                                rdfs:subClassOf a-con:ArchitecturalElementType ;
+                                rdfs:comment "Questa classe rappresenta un tipo di insieme di elementi architettonici."@it ,
+                                             "This class represents the architectural assembly type."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                rdfs:label "Architectural assembly type"@en ,
+                                           "Tipo di insieme di elementi architettonici"@it ;
+                                owl:versionInfo "stabile"@it ,
+                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalComplex
+a-con:ArchitecturalComplex rdf:type owl:Class ;
+                           rdfs:subClassOf a-con:ConstructionSpace ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty core:hasPart ;
+                                             owl:allValuesFrom a-con:Building
+                                           ] ;
+                           owl:disjointWith a-con:Building ;
+                           rdfs:comment "Questa classe rappresenta un insieme di diverse costruzioni che costituiscono una unità architettonica omogenea."@it ,
+                                        "This class represents a set of different constructions that constitute an homogeneous architectural whole."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "Architectural complex"@en ,
+                                      "Complesso architettonico"@it ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalElement
+a-con:ArchitecturalElement rdf:type owl:Class ;
+                           rdfs:subClassOf a-con:ConstructionElement ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty core:hasComponent ;
+                                             owl:allValuesFrom a-con:ArchitecturalElement
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty core:hasType ;
+                                             owl:allValuesFrom a-con:ArchitecturalElementType
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty a-con:exposed ;
+                                             owl:allValuesFrom xsd:boolean
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty a-dd:positionOnCulturalProperty ;
+                                             owl:allValuesFrom rdfs:Literal
+                                           ] ;
+                           rdfs:comment "Questa classe rappresenta gli elementi architettonici, sia strutturali sia non strutturali, che sono parte primaria della costruzione.."@it ,
+                                        "This class represents the architectural elements, both structural and not structural, that are primarily part of a construction.."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "Architectural element"@en ,
+                                      "Elemento architettonico"@it ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalElementType
+a-con:ArchitecturalElementType rdf:type owl:Class ;
+                               rdfs:subClassOf core:Type ;
+                               rdfs:comment "Questa classe rappresenta il tipo di un elemento architettonico."@it ,
+                                            "This class represents an architectural element type."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                               rdfs:label "Architectural element type"@en ,
+                                          "Tipo di elemento architettonico"@en ;
+                               owl:versionInfo "stabile"@it ,
+                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ArchitecturalOrder
+a-con:ArchitecturalOrder rdf:type owl:Class ;
+                         rdfs:subClassOf core:Characteristic ;
+                         rdfs:comment "Questa classe rappresenta ognuno dei cinque maggiori stili classici dell'architettura classificata in base allo stile delle colonne, dei capitelli, delle trabeazioni (es. tuscanico, dorico, ionico, corinzio, composito)."@it ,
+                                      "This class represents any of the five major classical styles of architecture classified by the style of columns, capitals, entablatures (i.e. Tuscan, Doric, Ionic, Corinthian, Composite)."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                         rdfs:label "Architectural order"@en ,
+                                    "Ordine architettonico"@it ;
+                         owl:versionInfo "stabile"@it ,
+                                         "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/BarrierElement
+a-con:BarrierElement rdf:type owl:Class ;
+                     rdfs:subClassOf a-con:ArchitecturalElement ;
+                     owl:disjointWith a-con:OpeningElement .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Bay
+a-con:Bay rdf:type owl:Class ;
+          rdfs:subClassOf a-con:ConstructionSpace ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasType ;
+                            owl:allValuesFrom a-con:BaysType
+                          ] ;
+          rdfs:comment "Questa classe rappresenta una campata, cioè lo spazio ripetuto di un edificio o di una parte di esso, definito da elementi architettonici ricorrenti, come archi, volte, aperture o pilastri."@it ,
+                       """This class represents a bay of a construction. 
+I.e: the repeated, similar divisions or compartments of a building or part of a building, as defined by recurring architectural features, such as arches, vaults, openings, or pilasters."""@en ;
+          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+          rdfs:label "Bay"@en ,
+                     "Campata"@it ;
+          owl:versionInfo "instabile"@it ,
+                          "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/BaysType
+a-con:BaysType rdf:type owl:Class ;
+               rdfs:subClassOf a-con:ConstructionSpaceType ;
+               rdfs:comment "Questa classe rappresenta un tipo di configurazione delle campate di uno spazio, ad es. campate alternate, campate regolari."@it ,
+                            """This class represents a type of configuration of the bays of a space. 
+e.g. alternating bays, regular bays, etc."""@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Bay type"@en ,
+                          "Tipo di campate"@it ;
+               owl:versionInfo "instabile"@it ,
+                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Beam
+a-con:Beam rdf:type owl:Class ;
+           rdfs:subClassOf a-con:HorizontalElement ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:encastrated ;
+                             owl:allValuesFrom xsd:boolean
+                           ] ;
+           rdfs:comment "Questa classe rappresenta una trave"@it ,
+                        "This class represents a beam"@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Beam"@en ,
+                      "Trave"@it ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Building
+a-con:Building rdf:type owl:Class ;
+               rdfs:subClassOf a-con:ConstructionSpace ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty a-con:numberOfFloors ;
+                                 owl:allValuesFrom rdfs:Literal
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty a-con:numberOfRooms ;
+                                 owl:allValuesFrom xsd:positiveInteger
+                               ] ;
+               rdfs:comment "Questa classe rappresenta un tipo di costruzione, definito dalla presenza di muri e di una copertura."@it ,
+                            "This class represents a kind of construction, defined by walls and a roof."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Building"@en ,
+                          "Edificio"@it ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               a-cat:iccdNormTag "Normativa A: SI/SII/SIIN;SIIP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Built-inFurnishingElement
+a-con:Built-inFurnishingElement rdf:type owl:Class ;
+                                rdfs:subClassOf a-con:FurnishingElement ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty a-cd:hasAuthor ;
+                                                  owl:allValuesFrom l0:Agent
+                                                ] ;
+                                owl:disjointWith a-con:MovableFurnishingElement ;
+                                rdfs:comment "Questa classe rappresenta gli elementi d'arredo integrati in una costruzione."@it ,
+                                             "This class represents the built-in furnishing elements in a construction."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                                rdfs:label "Arredo integrato"@it ,
+                                           "Built-in furnishing element"@en ;
+                                owl:versionInfo "stabile"@it ,
+                                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Ceiling
+a-con:Ceiling rdf:type owl:Class ;
+              rdfs:subClassOf a-con:Covering ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty core:hasType ;
+                                owl:allValuesFrom a-con:CeilingType
+                              ] ;
+              rdfs:comment "Questa classe rappresenta il soffitto."@it ,
+                           "This class represents the ceiling."@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "Ceiling"@en ,
+                         "Soffitto"@it ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/CeilingType
+a-con:CeilingType rdf:type owl:Class ;
+                  rdfs:subClassOf a-con:CoveringType ;
+                  rdfs:comment "Questa classe rappresenta il tipo di soffitto."@it ,
+                               "This class represents the ceiling type."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "Ceiling type"@en ,
+                             "Tipo di soffitto"@it ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Chimney
+a-con:Chimney rdf:type owl:Class ;
+              rdfs:subClassOf a-con:VerticalElement ;
+              rdfs:comment "Questa classe rappresenta il comignolo di una costruzione."@it ,
+                           "This class represents the chimney of a construction."@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "Chimney"@en ,
+                         "Comignolo"@it ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/CirculationElement
+a-con:CirculationElement rdf:type owl:Class ;
+                         rdfs:subClassOf a-con:ArchitecturalElement ;
+                         rdfs:comment "Questa classe rappresenta gli elementi architettonici impiegati per muoversi tra gli spazi di una costruzione, per esempio le scale di un palazzo."@it ,
+                                      "This class represents architectural elements used to move people through spaces, such as stairs."@en ;
+                         rdfs:label "Circulation element" ,
+                                    "Elemento di circolazione"@it .
+
+
+###  https://w3id.org/arco/ontology/construction-description/CirculationElementType
+a-con:CirculationElementType rdf:type owl:Class ;
+                             rdfs:subClassOf a-con:ArchitecturalElementType ;
+                             a-cat:iccdNormTag "ICCD Normativa A: SC/SCL/SCLG" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConnectionElement
+a-con:ConnectionElement rdf:type owl:Class ;
+                        rdfs:subClassOf a-con:ArchitecturalElement ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty core:hasType ;
+                                          owl:allValuesFrom a-con:ConnectionElementType
+                                        ] ;
+                        rdfs:comment "Questa classe rappresenta gli elementi architettonici che collegano due parti della costruzione"@it ,
+                                     "This class represents the architectural elements of a construction that join two parts of the property"@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Connection element"@en ,
+                                   "Elemento di collegamento"@it ;
+                        owl:deprecated "true"^^xsd:boolean ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        core:replacedBy a-con:CirculationElement .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConnectionElementType
+a-con:ConnectionElementType rdf:type owl:Class ;
+                            rdfs:subClassOf a-con:ArchitecturalElementType ;
+                            rdfs:comment "Questa classe rappresenta il tipo di elemento di connessione architettonico."@it ,
+                                         "This class represents the type of an architectural connection element."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Connection type"@en ,
+                                       "Tipo di connessione"@it ;
+                            owl:deprecated "true"^^xsd:boolean ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en ;
+                            a-cat:iccdNormTag "ICCD Normativa A: SC/SCL/SCLG" ;
+                            core:replacedBy a-con:CirculationElementType .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Construction
+a-con:Construction rdf:type owl:Class ;
+                   rdfs:subClassOf l0:Object ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasConstructionDevelopment ;
+                                     owl:allValuesFrom a-con:ConstructionDevelopment
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasConstructionElement ;
+                                     owl:allValuesFrom a-con:ConstructionElement
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasConstructionSpace ;
+                                     owl:allValuesFrom a-con:ConstructionSpace
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasCovering ;
+                                     owl:allValuesFrom a-con:Covering
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasModeOfSuperelevation ;
+                                     owl:allValuesFrom a-con:SuperelevationMode
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasPositionOnCeilingLevel ;
+                                     owl:allValuesFrom a-con:PositionOnCeilingLevel
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:hasPositionOnGroundLevel ;
+                                     owl:allValuesFrom a-con:PositionOnGroundLevel
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-dd:hasMeasurementCollection ;
+                                     owl:allValuesFrom a-dd:MeasurementCollection
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-dd:hasOrientation ;
+                                     owl:allValuesFrom a-dd:Orientation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-dd:hasTechnicalStatus ;
+                                     owl:allValuesFrom a-dd:TechnicalStatus
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:isolatedElementOrSpace ;
+                                     owl:allValuesFrom xsd:boolean
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:jutting ;
+                                     owl:allValuesFrom xsd:boolean
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-con:withoutOpening ;
+                                     owl:allValuesFrom xsd:boolean
+                                   ] ;
+                   rdfs:comment "Any work or artefact, which can be permanently fixed to the ground or which contributes to defining a more complex work/artefact, created through a process involving the construction of a set of connected structures on the basis of a project or planning level."@en ,
+                                "Qualsiasi opera o manufatto, che può essere stabilmente fissata al suolo o che contribuisce a definire un'opera/manufatto più complessa, realizzata mediante un processo che coinvolge l'edificazione di un insieme di strutture collegate sulla base di un progetto o livello di pianificazione."@it ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Construction"@en ,
+                              "Costruzione"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConstructionDevelopment
+a-con:ConstructionDevelopment rdf:type owl:Class ;
+                              rdfs:subClassOf l0:Description ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty a-con:hasLayout ;
+                                                owl:allValuesFrom a-con:Layout
+                                              ] ;
+                              rdfs:comment "Questa classe rappresenta la suddivisione orizzontale e verticale dello spazio interno di una costruzione."@it ,
+                                           "subdivision of the interior space of a construction."@en ;
+                              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                              rdfs:label "ConstructionDevelopment"@en ,
+                                         "Interior subdvision"@en ,
+                                         "Suddivisione interna"@it ,
+                                         "Sviluppo della costruzione"@it ;
+                              owl:versionInfo "stabile"@it ,
+                                              "stable"@en ;
+                              a-cat:iccdNormTag "Normativa A: SI/SII/SIIV;SIIO" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConstructionElement
+a-con:ConstructionElement rdf:type owl:Class ;
+                          rdfs:subClassOf a-con:Construction ;
+                          owl:disjointWith a-con:ConstructionSpace ;
+                          rdfs:comment "Questa classe rappresenta tutti gli elementi fisici che fanno parte di una costruzione."@it ,
+                                       "This class represents all the physical elements that are part of a construction."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "Construction element"@en ,
+                                     "Elemento della costruzione"@it ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConstructionPart
+a-con:ConstructionPart rdf:type owl:Class ;
+                       rdfs:subClassOf l0:Object ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty a-dd:hasOrientation ;
+                                         owl:allValuesFrom a-dd:Orientation
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty a-con:numberOfFloors ;
+                                         owl:allValuesFrom rdfs:Literal
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty a-con:numberOfRooms ;
+                                         owl:allValuesFrom xsd:positiveInteger
+                                       ] ;
+                       rdfs:comment "Questa classe rappresenta la parte di una costruzione."@it ,
+                                    "This class represents the part of a construction."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "Construction part"@en ,
+                                  "Parte di costruzione"@it ;
+                       owl:deprecated "true"^^xsd:boolean ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConstructionSpace
+a-con:ConstructionSpace rdf:type owl:Class ;
+                        rdfs:subClassOf a-con:Construction ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty core:hasType ;
+                                          owl:someValuesFrom a-con:ConstructionSpaceType
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty a-con:hasConstructionDevelopment ;
+                                          owl:allValuesFrom a-con:ConstructionDevelopment
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty a-con:hasLayout ;
+                                          owl:allValuesFrom a-con:Layout
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty a-dd:hasOrientation ;
+                                          owl:allValuesFrom a-dd:Orientation
+                                        ] ;
+                        rdfs:comment "Questa classe rappresenta lo spazio interno o esterno di una costruzione, eventualmente delimitato da elementi fisici e destinato a una determinata funzione."@it ,
+                                     "This class represents the interior or exterior space of a construction, possibly bounded by physical elements and intended for a certain function."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Construction space"@en ,
+                                   "Spazio della costruzione"@it ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag "ICCD Normativa A: SI/SII/SIIP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ConstructionSpaceType
+a-con:ConstructionSpaceType rdf:type owl:Class ;
+                            rdfs:subClassOf core:Type ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty core:isTypeOf ;
+                                              owl:allValuesFrom a-con:ConstructionSpace
+                                            ] ;
+                            rdfs:comment "Questa classe rappresenta il tipo di spazio della costruzione."@it ,
+                                         "This class represents the construction space type."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Construction space type"@en ,
+                                       "Tipo di spazio della costruzione"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Covering
+a-con:Covering rdf:type owl:Class ;
+               rdfs:subClassOf l0:Object ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:hasType ;
+                                 owl:someValuesFrom a-con:CoveringType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty a-dd:hasTechnicalStatus ;
+                                 owl:allValuesFrom a-dd:TechnicalStatus
+                               ] ;
+               rdfs:comment "Questa classe rappresenta i rivestimenti delle superfici interne ed esterne di una costruzione."@it ,
+                            "This class represents the coverings of the interior and exterior surfaces of a construction."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Covering"@en ,
+                          "Rivestimento"@it ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               a-cat:iccdNormTag "ICCD Normativa A: PV e CP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/CoveringType
+a-con:CoveringType rdf:type owl:Class ;
+                   rdfs:subClassOf core:Type ;
+                   rdfs:comment "Questa classe rappresenta il tipo di rivestimento."@it ,
+                                "This class represents the type of a covering."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Covering type"@en ,
+                              "Tipo di rivestimento"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Door
+a-con:Door rdf:type owl:Class ;
+           rdfs:subClassOf a-con:OpeningElement ;
+           rdfs:comment "Questa classe rappresenta una porta."@it ,
+                        "This class represents a door."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Door"@en ,
+                      "Porta"@it ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ElevationDevelopment
+a-con:ElevationDevelopment rdf:type owl:Class ;
+                           rdfs:subClassOf a-con:ConstructionDevelopment ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty a-con:numberOfRegisters ;
+                                             owl:allValuesFrom xsd:integer
+                                           ] ;
+                           owl:disjointWith a-con:PlanimetricDevelopment ;
+                           rdfs:comment "Questa classe rappresenta lo sviluppo in elevato dello spazio interno di una costruzione."@it ,
+                                        "This class represents the elevation development of the interior space of a construction."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "Horizontal subdivision"@en ,
+                                      "Suddivisione orizzontale"@it ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en ;
+                           a-cat:iccdNormTag "ICCD Normativa A: SI/SII/SIIO" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ElevationLayout
+a-con:ElevationLayout rdf:type owl:Class ;
+                      rdfs:subClassOf a-con:Layout ;
+                      rdfs:comment "Questa classe rappresenta la forma del prospetto di una costruzione  e il modo in cui le sue differenti parti sono assemblate nella composizione d'insieme."@it ,
+                                   "This class represents the shape of the elevation of a construction and the way in which the different parts of it are arranged in the whole composition."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "Elevation layout"@en ,
+                                 "Schema iconografico del prospetto"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/EnclosingElement
+a-con:EnclosingElement rdf:type owl:Class ;
+                       rdfs:subClassOf a-con:ArchitecturalElement ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty core:hasType ;
+                                         owl:allValuesFrom a-con:EnclosingElementType
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty a-con:mainFacade ;
+                                         owl:allValuesFrom rdfs:Literal
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty a-con:overlooking ;
+                                         owl:allValuesFrom rdfs:Literal
+                                       ] ;
+                       rdfs:comment "Architectural elements of the structure of a building that enclose areas of the building."@en ,
+                                    "Questa classe rappresenta gli elementi architettonici della struttura di una costruzione che racchiudono aree dell'edificio stesso, come per esempio la facciata di un palazzo."@it ;
+                       rdfs:label "Elemento di chiusura"@it ,
+                                  "Enclosing element"@en ,
+                                  "Involucro esterno"@it .
+
+
+###  https://w3id.org/arco/ontology/construction-description/EnclosingElementType
+a-con:EnclosingElementType rdf:type owl:Class ;
+                           rdfs:subClassOf a-con:ArchitecturalElementType ;
+                           rdfs:label "Enclosing element type"@it ,
+                                      "Tipo di elemento di chiusura"@it ,
+                                      "Tipo di involuctro esterno"@it .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Escalator
+a-con:Escalator rdf:type owl:Class ;
+                rdfs:subClassOf a-con:TransportElement ;
+                rdfs:comment "Questa classe rappresenta  la scala mobile."@it ,
+                             "This class represents an escalator."@en ;
+                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                rdfs:label "Escalator"@en ,
+                           "Scala mobile"@it ;
+                owl:versionInfo "stabile"@it ,
+                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Facade
+a-con:Facade rdf:type owl:Class ;
+             rdfs:subClassOf a-con:ArchitecturalElement ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:hasType ;
+                               owl:allValuesFrom a-con:FacadeType
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:overlooking ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:comment "Questa classe rappresenta la facciata di una costruzione."@it ,
+                          "This class represents the facade of a construction."@en ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Facade"@en ,
+                        "Facciata"@it ;
+             owl:deprecated "true"^^xsd:boolean ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en ;
+             core:replacedBy a-con:EnclosingElement .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FacadeType
+a-con:FacadeType rdf:type owl:Class ;
+                 rdfs:subClassOf a-con:ArchitecturalElementType ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:isTypeOf ;
+                                   owl:allValuesFrom a-con:Facade
+                                 ] ;
+                 rdfs:comment "Questa classe rappresenta il tipo di facciata."@it ,
+                              "This class represents the type of facade."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "Facade type"@en ,
+                            "Tipo di facciata"@it ;
+                 owl:deprecated "true"^^xsd:boolean ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en ;
+                 core:replacedBy a-con:EnclosingElementType .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FenceOrGate
+a-con:FenceOrGate rdf:type owl:Class ;
+                  rdfs:subClassOf a-con:BarrierElement ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty core:hasType ;
+                                    owl:allValuesFrom a-con:FenceOrGateType
+                                  ] ;
+                  rdfs:comment "Questa classe rappresenta una recinzione o un cancello."@it ,
+                               "This class represents a fence or a gate."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "Fence or gate"@en ,
+                             "Recinzione o cancello"@it ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FenceOrGateType
+a-con:FenceOrGateType rdf:type owl:Class ;
+                      rdfs:subClassOf a-con:ArchitecturalElementType ;
+                      rdfs:comment "Questa classe rappresenta un tipo di recinzione o cancello."@it ,
+                                   "This class represents an architectural element type."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "Fence or gate type"@en ,
+                                 "Tipo di recinzione o cancello"@it ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Floor
+a-con:Floor rdf:type owl:Class ;
+            rdfs:subClassOf a-con:ConstructionSpace ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty a-con:numberOfRooms ;
+                              owl:allValuesFrom xsd:positiveInteger
+                            ] ;
+            rdfs:comment "Questa classe rappresenta il piano di una costruzione."@it ,
+                         "This class represents the floor of a construction."@en ;
+            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+            rdfs:label "Floor"@en ,
+                       "Piano"@it ;
+            owl:versionInfo "stabile"@it ,
+                            "stable"@en ;
+            a-cat:iccdNormTag "ICCD Normativa A: SI/SII/SIIN" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Flooring
+a-con:Flooring rdf:type owl:Class ;
+               rdfs:subClassOf a-con:Covering ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty a-con:hasFlooringLayout ;
+                                 owl:allValuesFrom a-con:FlooringLayout
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty a-con:hasSubfloor ;
+                                 owl:allValuesFrom a-con:Subfloor
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:hasType ;
+                                 owl:allValuesFrom a-con:FlooringType
+                               ] ;
+               owl:disjointWith a-con:Roofing ;
+               rdfs:comment "Questa classe rappresenta la pavimentazione di una costruzione."@it ,
+                            "This class represents the flooring of a construction."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Flooring"@en ,
+                          "Pavimentazione"@it ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               a-cat:iccdNormTag "Normativa A: PV/PVM" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FlooringLayout
+a-con:FlooringLayout rdf:type owl:Class ;
+                     rdfs:subClassOf a-con:Layout ;
+                     rdfs:comment "Questa classe rappresenta lo schema compositivo del disegno della pavimentazione."@it ,
+                                  "This class represents the pattern of the floor."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "Flooring layout"@en ,
+                                "Schema di posa"@it ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en ;
+                     a-cat:iccdNormTag "Normativa A: PV/PVM/PVMS"@it .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FlooringType
+a-con:FlooringType rdf:type owl:Class ;
+                   rdfs:subClassOf a-con:CoveringType ;
+                   owl:disjointWith a-con:RoofingType ;
+                   rdfs:comment "Questa classe rappresenta il tipo di pavimentazione."@it ,
+                                "This class represents the type of a flooring."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Flooring type"@en ,
+                              "Tipo di pavimentazione"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en ;
+                   a-cat:iccdNormTag "Normativa A: PV/PVM/PVMG" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Foundation
+a-con:Foundation rdf:type owl:Class ;
+                 rdfs:subClassOf a-con:StructuralElement ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty a-con:laysOnSoil ;
+                                   owl:allValuesFrom a-dd:Soil
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:hasType ;
+                                   owl:allValuesFrom a-con:FoundationType
+                                 ] ;
+                 rdfs:comment "Questa classe rappresenta le fondazioni di una costruzione."@it ,
+                              "This class represents the foundation of a construction."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "Fondazioni"@it ,
+                            "Foundation"@en ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en ;
+                 a-cat:iccdNormTag "Normativa A: FN" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FoundationType
+a-con:FoundationType rdf:type owl:Class ;
+                     rdfs:subClassOf a-con:ArchitecturalElementType ;
+                     rdfs:comment "Questa classe rappresenta il tipo di fondazioni."@it ,
+                                  "This class represents type of the foundation."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "Foundation type"@en ,
+                                "Tipo di fondazioni"@it ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en ;
+                     a-cat:iccdNormTag "ICCD Normativa A: FN/FNST;FNSQ" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Fountain
+a-con:Fountain rdf:type owl:Class ;
+               rdfs:subClassOf a-con:WaterElement ;
+               rdfs:comment "Questa classe rappresenta una fontana."@it ,
+                            "This class represents a fountain."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Fontana"@it ,
+                          "Fountain"@en ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               a-cat:iccdNormTag "ICCD Normativa OG: FOT* (FOTD)" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FurnishingElement
+a-con:FurnishingElement rdf:type owl:Class ;
+                        rdfs:subClassOf a-con:ConstructionElement ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty core:hasType ;
+                                          owl:allValuesFrom a-con:FurnishingElementType
+                                        ] ;
+                        rdfs:comment "Questa classe rappresenta gli elementi, sia mobili sia fissi, che compongono l'arredo di una costruzione."@it ,
+                                     "This class represents the elements, both movable or built-in, that are part of the furniture of a construction."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Elemento di mobilio"@it ,
+                                   "Furnishing element"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/FurnishingElementType
+a-con:FurnishingElementType rdf:type owl:Class ;
+                            rdfs:subClassOf core:Type ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty core:isTypeOf ;
+                                              owl:allValuesFrom a-con:FurnishingElement
+                                            ] ;
+                            rdfs:comment "Questa classe rappresenta il tipo di elemento di mobilio."@it ,
+                                         "This class represents the type of an furnishing element."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Furnishing element type"@en ,
+                                       "Tipo di elemento di mobilio"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/HorizontalElement
+a-con:HorizontalElement rdf:type owl:Class ;
+                        rdfs:subClassOf a-con:ArchitecturalElement ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty core:hasType ;
+                                          owl:allValuesFrom a-con:HorizontalElementType
+                                        ] ;
+                        owl:disjointWith a-con:VerticalElement ;
+                        rdfs:comment "Questa classe rappresenta gli elementi architettonici orizzontali che delimitano e suddividono gli spazi della costruzione."@it ,
+                                     "This class represents the horizontal architectural elements that bound and subdivide the spaces of the construction."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Elemento orizzontale"@it ,
+                                   "Horizontal element"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag "Normativa A: SO" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/HorizontalElementType
+a-con:HorizontalElementType rdf:type owl:Class ;
+                            rdfs:subClassOf a-con:ArchitecturalElementType ;
+                            rdfs:comment "Questa classe rappresenta il tipo di elemento orizzonale."@it ,
+                                         "This class represents the type of an horizontal element."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Horizontal element type"@en ,
+                                       "Tipo di elemento orizzontale"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en ;
+                            a-cat:iccdNormTag "ICCD Normativa A: SO/SOF/SOFG;SOFP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Layout
+a-con:Layout rdf:type owl:Class ;
+             rdfs:subClassOf l0:Description ;
+             rdfs:comment "Questa classe rappresenta la forma della pianta e del prospetto di una costruzione e il modo in cui le varie parti di essi sono assemblate nella composizione d'insieme."@it ,
+                          "This class represents the shape of the plan and the elevation of a construction and the way in which the different parts of them are arranged in the whole composition."@en ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Layout"@en ,
+                        "Schema iconografico"@it ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en ;
+             a-cat:iccdNormTag "Normativa A: PN/PNT/PNTS e PN/PNT/PNTF. Normativa PG: MP/MPT/MPTS E MP/MPT/MPTF" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Lift
+a-con:Lift rdf:type owl:Class ;
+           rdfs:subClassOf a-con:TransportElement ;
+           rdfs:comment "Questa classe rappresenta l'ascensore."@it ,
+                        "This class represents the lift."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Ascensore"@it ,
+                      "Lift"@en ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ModeOfIrrigation
+a-con:ModeOfIrrigation rdf:type owl:Class ;
+                       rdfs:subClassOf core:Characteristic ;
+                       rdfs:comment "Questa classe rappresenta la la modalità di irrigazione di un sistema idrico."@it ,
+                                    "This class represents the modof irrigation of a water system"@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "Modalità di irrigazione"@it ,
+                                  "Mode of irrigation"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en ;
+                       a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/MovableFurnishingElement
+a-con:MovableFurnishingElement rdf:type owl:Class ;
+                               rdfs:subClassOf a-con:FurnishingElement ;
+                               rdfs:comment "Questa classe rappresenta gli elementi di arredo mobili."@it ,
+                                            "This class represents the movable furnishing elements."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                               rdfs:label "Arredo mobile"@it ,
+                                          "Movable furnishing element"@en ;
+                               owl:versionInfo "stabile"@it ,
+                                               "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/MovingWalkway
+a-con:MovingWalkway rdf:type owl:Class ;
+                    rdfs:subClassOf a-con:TransportElement ;
+                    rdfs:comment "Questa classe rappresenta il tappeto mobile."@it ,
+                                 "This class represents the moving walkway."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "Moving walkway"@en ,
+                               "Tappeto mobile"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/NaturalElement
+a-con:NaturalElement rdf:type owl:Class ;
+                     rdfs:subClassOf a-con:ConstructionElement ;
+                     rdfs:comment "Questa classe rappresenta un elemento naturale"@it ,
+                                  "This class represents a natural element"@en ;
+                     rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                     rdfs:label "Elemento naturale"@it ,
+                                "Natural element"@en ;
+                     owl:versionInfo "stabile"@it ,
+                                     "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/NaveOrAisle
+a-con:NaveOrAisle rdf:type owl:Class ;
+                  rdfs:subClassOf a-con:ConstructionSpace ;
+                  rdfs:label "Navata"@it ,
+                             "Nave or aisle"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/OpeningElement
+a-con:OpeningElement rdf:type owl:Class ;
+                     rdfs:subClassOf a-con:ArchitecturalElement ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty a-con:hasOpeningSystem ;
+                                       owl:allValuesFrom a-con:OpeningSystem
+                                     ] ;
+                     owl:disjointWith a-con:VerticalElement ;
+                     rdfs:comment "Generally denotes apertures or breaks in the surface of a wall or other architectural element."@en ,
+                                  "Questa classe rappresenta aperture sulla superficie di un elemento architettonico, per esempio un muro, tipicamente includono finestre o porte."@it ;
+                     rdfs:label "Elemento di apertura"@it ,
+                                "Opening element"@en ;
+                     owl:versionInfo "instabile"@it ,
+                                     "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/OpeningSystem
+a-con:OpeningSystem rdf:type owl:Class ;
+                    rdfs:subClassOf a-con:TechnicalSystem ;
+                    rdfs:comment "Questa classe rappresenta il sistema di apertura di una porta o di una finestra."@it ,
+                                 "This class represents the opening system of a door or a window."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "Opening system"@en ,
+                               "Sistema di apertura"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/OutdoorSpace
+a-con:OutdoorSpace rdf:type owl:Class ;
+                   rdfs:subClassOf a-con:ConstructionSpace ;
+                   rdfs:comment "Questa classe rappresenta gli spazi all'aperto di una costruzione (es. cortili, logge, terrazze, giardini)."@it ,
+                                "This class represents the outdoor spaces of a construction (i.e. courtyards, balconies, terraces, gardens)."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Outdoor space"@en ,
+                              "Spazio esterno"@it ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en ;
+                   a-cat:iccdNormTag "ICCD Normativa PG" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/PlanLayout
+a-con:PlanLayout rdf:type owl:Class ;
+                 rdfs:subClassOf a-con:Layout ;
+                 rdfs:comment "Questa classe rappresenta la forma della pianta di una costruzione e il modo in cui le sue differenti parti sono assemblate nella composizione d'insieme."@it ,
+                              "This class represents the shape of the elevation of a construction and the way in which the different parts of it are arranged in the whole composition."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "Plan layout"@en ,
+                            "Schema iconografico della pianta"@it ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en ;
+                 a-cat:iccdNormTag "ICCD Normativa A: PN/PNT/PffittoNTS" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/PlanimetricDevelopment
+a-con:PlanimetricDevelopment rdf:type owl:Class ;
+                             rdfs:subClassOf a-con:ConstructionDevelopment ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty a-con:bayPartitionRatio ;
+                                               owl:allValuesFrom rdfs:Literal
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty a-con:numberOfBays ;
+                                               owl:allValuesFrom xsd:integer
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty a-con:numberOfNaveOrAisle ;
+                                               owl:allValuesFrom xsd:integer
+                                             ] ;
+                             rdfs:comment "Questa classe rappresenta lo sviluppo planimetrico dello spazio interno di una costruzione."@it ,
+                                          "This class represents the planimettric development of the interior space of a construction."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "Planimetric development"@en ,
+                                        "Sviluppo planimetrico"@it ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en ;
+                             a-cat:iccdNormTag "ICCD Normativa A: SI/SII/SIIV" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/PositionOnCeilingLevel
+a-con:PositionOnCeilingLevel rdf:type owl:Class ;
+                             rdfs:subClassOf core:Characteristic ;
+                             rdfs:comment "Questa classe rappresenta la posizione rispetto al livello del soffitto di una costruzione."@it ,
+                                          "This class represents the position on ceiling level of a construction."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "Position on ceiling level"@en ,
+                                        "Posizione sul livello del so"@it ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/PositionOnGroundLevel
+a-con:PositionOnGroundLevel rdf:type owl:Class ;
+                            rdfs:subClassOf core:Characteristic ;
+                            rdfs:comment "Questa classe rappresenta la posizione rispetto al livello del terreno di una costruzione."@it ,
+                                         "This class represents the position on ground level of a construction."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                            rdfs:label "Position on ground level"@en ,
+                                       "Posizione sul livello del terreno"@it ;
+                            owl:versionInfo "stabile"@it ,
+                                            "stable"@en ;
+                            a-cat:iccdNormTag "ICCD Normativa SI: DA/PLT/PLTD" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Railing
+a-con:Railing rdf:type owl:Class ;
+              rdfs:subClassOf a-con:BarrierElement ;
+              rdfs:comment "Questa classe rappresenta la ringhiera."@it ,
+                           "This class represents the railing."@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "Railing"@en ,
+                         "Ringhiera"@it ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Ramp
+a-con:Ramp rdf:type owl:Class ;
+           rdfs:subClassOf a-con:CirculationElement ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:differenceInHeight ;
+                             owl:allValuesFrom xsd:positiveInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:numberOfFlights ;
+                             owl:allValuesFrom xsd:positiveInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:numberOfLandings ;
+                             owl:allValuesFrom xsd:integer
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:spatialLocation ;
+                             owl:allValuesFrom rdfs:Literal
+                           ] ;
+           owl:disjointWith a-con:Stairs ;
+           rdfs:comment "Questa classe rappresenta una rampa."@it ,
+                        "This class represents a ramp."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Ramp"@en ,
+                      "Rampa"@it ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ReinforcementElement
+a-con:ReinforcementElement rdf:type owl:Class ;
+                           rdfs:subClassOf a-con:StructuralElement ;
+                           rdfs:comment "Questa classe rappresenta un elemento di rinforzo."@it ,
+                                        "This class represents a reinforcement element."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "Elemento di rinforzo"@it ,
+                                      "Reinforcement element"@en ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Roof
+a-con:Roof rdf:type owl:Class ;
+           rdfs:subClassOf a-con:HorizontalElement ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:hasCovering ;
+                             owl:allValuesFrom a-con:Roofing
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:hasRoofStructure ;
+                             owl:allValuesFrom a-con:RoofStructure
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty core:hasType ;
+                             owl:allValuesFrom a-con:RoofType
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:symmetrical ;
+                             owl:allValuesFrom xsd:boolean
+                           ] ;
+           rdfs:comment "Questa classe rappresenta una copertura."@it ,
+                        "This class represents a roof."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Copertura"@it ,
+                      "Roof"@en ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en ;
+           a-cat:iccdNormTag "Normativa A: CP" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/RoofStructure
+a-con:RoofStructure rdf:type owl:Class ;
+                    rdfs:subClassOf l0:Object ;
+                    rdfs:comment "Questa classe rappresenta la soluzione strutturale della copertura di una costruzione."@it ,
+                                 "This class represents the structural solution of the roof of a construction."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "Roof structure"@en ,
+                               "Struttura del tetto"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en ;
+                    a-cat:iccdNormTag "ICCD Normativa A: CP/CPC/CPCT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/RoofType
+a-con:RoofType rdf:type owl:Class ;
+               rdfs:subClassOf a-con:ArchitecturalElementType ;
+               rdfs:comment "Questa classe rappresenta il tipo di copertura."@it ,
+                            "This class represents the type of a roof."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Roof type"@en ,
+                          "Tipo di copertura"@it ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               a-cat:iccdNormTag "ICCD Normativa A: CP/CPF/CPFG" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Roofing
+a-con:Roofing rdf:type owl:Class ;
+              rdfs:subClassOf a-con:Covering ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty core:hasType ;
+                                owl:allValuesFrom a-con:RoofingType
+                              ] ;
+              rdfs:comment "Questa classe rappresenta il manto di copertura."@it ,
+                           "This class represents the roofing."@en ;
+              rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+              rdfs:label "Manto di copertura"@it ,
+                         "Roofing"@en ;
+              owl:versionInfo "stabile"@it ,
+                              "stable"@en ;
+              a-cat:iccdNormTag "Normativa A: CP/CPM" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/RoofingType
+a-con:RoofingType rdf:type owl:Class ;
+                  rdfs:subClassOf a-con:CoveringType ;
+                  rdfs:comment "Questa classe rappresenta il tipo di manto di copertura."@it ,
+                               "This class represents the type of a roofing."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "Roofing type"@en ,
+                             "Tipo di manto di copertura"@it ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en ;
+                  a-cat:iccdNormTag "Normativa A: CP/CPM/CPMT e CP/CPM/CPMQ" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Room
+a-con:Room rdf:type owl:Class ;
+           rdfs:subClassOf a-con:ConstructionSpace ;
+           rdfs:comment "Questa classe rappresenta una stanza."@it ,
+                        "This class represents a room."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Room"@en ,
+                      "Stanza"@it ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/ShadingDevice
+a-con:ShadingDevice rdf:type owl:Class ;
+                    rdfs:subClassOf l0:Object ;
+                    rdfs:comment "Questa classe rappresenta un sistema di ombreggiatura."@it ,
+                                 "This class represents a shading device."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                    rdfs:label "Shading device"@en ,
+                               "Sistema di ombreggiatura"@it ;
+                    owl:versionInfo "stabile"@it ,
+                                    "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Stairs
+a-con:Stairs rdf:type owl:Class ;
+             rdfs:subClassOf a-con:CirculationElement ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:differenceInHeight ;
+                               owl:allValuesFrom xsd:positiveInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:numberOfFlights ;
+                               owl:allValuesFrom xsd:positiveInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:numberOfLandings ;
+                               owl:allValuesFrom xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:numberOfRises ;
+                               owl:allValuesFrom xsd:positiveInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty a-con:spatialLocation ;
+                               owl:allValuesFrom rdfs:Literal
+                             ] ;
+             rdfs:comment "Questa classe rappresenta una scala."@it ,
+                          "This class represents stairs"@en ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Scala"@it ,
+                        "Stairs"@en ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en ;
+             a-cat:iccdNormTag "ICCD Normativa A: SC" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/StructuralElement
+a-con:StructuralElement rdf:type owl:Class ;
+                        rdfs:subClassOf a-con:ArchitecturalElement ;
+                        rdfs:comment "Questa classe rappresenta gli elementi che sono parte della struttura di una costruzione."@it ,
+                                     "This class represents the elements that are part of the structure of a construction."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Elemento strutturale"@it ,
+                                   "Structural element"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Subfloor
+a-con:Subfloor rdf:type owl:Class ;
+               rdfs:subClassOf l0:Object ;
+               rdfs:label "Sottofondo" ,
+                          "Subfloor" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/SuperelevationMode
+a-con:SuperelevationMode rdf:type owl:Class ;
+                         rdfs:subClassOf core:Characteristic .
+
+
+###  https://w3id.org/arco/ontology/construction-description/TechnicalSystem
+a-con:TechnicalSystem rdf:type owl:Class ;
+                      rdfs:subClassOf core:System ;
+                      rdfs:comment "Questa classe rappresenta l'impianto tecnico di una costruzione."@it ,
+                                   "This class represents the technical system of a construction."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "Impianto tecnico"@it ,
+                                 "Technical system"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en ;
+                      a-cat:iccdNormTag "Normativa PG: IM/IMP/IMPT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Transept
+a-con:Transept rdf:type owl:Class ;
+               rdfs:subClassOf a-con:ConstructionSpace ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:hasType ;
+                                 owl:someValuesFrom a-con:TranseptType
+                               ] ;
+               rdfs:comment "Questa classe rappresenta un transetto."@it ,
+                            "This class represents a transept."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Transept"@en ,
+                          "Transetto"@it ;
+               owl:deprecated "true"^^xsd:boolean ;
+               owl:versionInfo "stabile"@it ,
+                               "stable"@en ;
+               core:replacedBy <https://w3id.org/arco/ontology/worship-construction/Transept> .
+
+
+###  https://w3id.org/arco/ontology/construction-description/TranseptType
+a-con:TranseptType rdf:type owl:Class ;
+                   rdfs:subClassOf a-con:ConstructionSpaceType ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty core:isTypeOf ;
+                                     owl:allValuesFrom a-con:Transept
+                                   ] ;
+                   rdfs:comment "Questa classe rappresenta un tipo di transetto."@it ,
+                                "This class represents a transept type."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Tipo di transetto"@it ,
+                              "Transept type"@en ;
+                   owl:deprecated "true"^^xsd:boolean ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en ;
+                   core:replacedBy <https://w3id.org/arco/ontology/worship-construction/TranseptType> .
+
+
+###  https://w3id.org/arco/ontology/construction-description/TransportElement
+a-con:TransportElement rdf:type owl:Class ;
+                       rdfs:subClassOf a-con:ConstructionElement ;
+                       rdfs:comment "Questa classe rappresenta gli elementi di una costruzione necessari per la movimentazione di persone, beni, animali."@it ,
+                                    "This class represents the elements of a construction, that move people, goods, animals."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "Elemento di trasporto"@it ,
+                                  "Transport element"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Truss
+a-con:Truss rdf:type owl:Class ;
+            rdfs:subClassOf a-con:HorizontalElement ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty core:hasType ;
+                              owl:allValuesFrom a-con:TrussType
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty a-con:symmetrical ;
+                              owl:allValuesFrom rdfs:Literal
+                            ] ;
+            rdfs:comment "E' un elemento, spesso strutturale, fabbricato con elementi dritti di metallo o legno a formare una serie di triangoli disposti su un unico piano."@it ,
+                         "This class represents a truss, a (structural) framework usually fabricated from straight pieces of metal or wood to form a series of triangles lying in a single plane."@en ;
+            rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+            rdfs:label "Capriata"@it ,
+                       "Truss"@en ;
+            owl:versionInfo "instabile"@it ,
+                            "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/TrussType
+a-con:TrussType rdf:type owl:Class ;
+                rdfs:subClassOf a-con:HorizontalElementType ;
+                rdfs:label "Tipo di capriata"@it ,
+                           "Truss type"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/VerticalConnection
+a-con:VerticalConnection rdf:type owl:Class ;
+                         rdfs:subClassOf a-con:ConnectionElement ;
+                         owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/arco/ontology/construction-description/VerticalElement
+a-con:VerticalElement rdf:type owl:Class ;
+                      rdfs:subClassOf a-con:ArchitecturalElement ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty a-con:hasProjectionElement ;
+                                        owl:allValuesFrom a-con:ArchitecturalElement
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty core:hasType ;
+                                        owl:allValuesFrom a-con:VerticalElementType
+                                      ] ;
+                      rdfs:comment "Questa classe rappresenta gli elementi architettonici verticali, sia strutturali che non strutturali, che delimitano e suddividono gli spazi della costruzione. "@it ,
+                                   "This class represents the architectural vertical elements, both load-bearing and not load-bearing, that bound and subdivide the spaces of a construction."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "Elemento verticale"@it ,
+                                 "Vertical element"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en ;
+                      a-cat:iccdNormTag "Normativa A: SV" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/VerticalElementType
+a-con:VerticalElementType rdf:type owl:Class ;
+                          rdfs:subClassOf a-con:ArchitecturalElementType ;
+                          rdfs:comment "Questa classe rappresenta il tipo di elemento verticale."@it ,
+                                       "This class represents the type of a vertical element."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                          rdfs:label "Tipo di elemento verticale"@it ,
+                                     "Vertical element type"@en ;
+                          owl:versionInfo "stabile"@it ,
+                                          "stable"@en ;
+                          a-cat:iccdNormTag "ICCD Normativa A: SV/SVCU;SVCT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Wall
+a-con:Wall rdf:type owl:Class ;
+           rdfs:subClassOf a-con:VerticalElement ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty a-con:hasProjectionElement ;
+                             owl:allValuesFrom a-con:ArchitecturalElement
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty core:hasType ;
+                             owl:allValuesFrom a-con:WallType
+                           ] .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WallType
+a-con:WallType rdf:type owl:Class ;
+               rdfs:subClassOf a-con:VerticalElementType ;
+               rdfs:comment "Questa classe rappresenta il tipo di muro."@it ,
+                            "This represents the type of a wall."@en ;
+               rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+               rdfs:label "Tipo di muro"@it ,
+                          "Wall type"@en ;
+               owl:versionInfo "instabile"@it ,
+                               "unstable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterAvailability
+a-con:WaterAvailability rdf:type owl:Class ;
+                        rdfs:subClassOf core:Characteristic ;
+                        rdfs:comment "Questa classe rappresenta la disponibilità idrica di un impianto idrico."@it ,
+                                     "This class represents the water availability of a water system."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Disponibilità idrica"@it ,
+                                   "Water availability"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterDistribution
+a-con:WaterDistribution rdf:type owl:Class ;
+                        rdfs:subClassOf core:Characteristic ;
+                        rdfs:comment "Questa classe rappresenta il tipo di distribuzione idrica di un impianto idrico."@it ,
+                                     "This class represents the water distribution type of a water system."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                        rdfs:label "Tipo di distribuzione idrica"@it ,
+                                   "Water distribution type"@en ;
+                        owl:versionInfo "stabile"@it ,
+                                        "stable"@en ;
+                        a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterElement
+a-con:WaterElement rdf:type owl:Class ;
+                   rdfs:subClassOf l0:Object ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-cd:hasDesignationInTime ;
+                                     owl:someValuesFrom a-cd:DesignationInTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-dd:hasTechnicalStatus ;
+                                     owl:someValuesFrom a-dd:TechnicalStatus
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty a-cd:hasDesignationInTime ;
+                                     owl:allValuesFrom a-cd:DesignationInTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty core:hasType ;
+                                     owl:allValuesFrom a-con:WaterElementType
+                                   ] ;
+                   rdfs:comment "Questa classe rappresenta l'elemento idrico di un impianto idrico."@it ,
+                                "This class represents the water element of a water system."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                   rdfs:label "Elemento idrico"@it ,
+                              "Water element"@en ;
+                   owl:versionInfo "stabile"@it ,
+                                   "stable"@en ;
+                   a-cat:iccdNormTag "ICCD Normativa PG: FOT* (FOTD)" ,
+                                     "Normativa PG: FO/FOT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterElementType
+a-con:WaterElementType rdf:type owl:Class ;
+                       rdfs:subClassOf a-con:ArchitecturalElementType ;
+                       rdfs:comment "Questa classe rappresenta un tipo di elemento idrico."@it ,
+                                    "This class represents a water element type."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                       rdfs:label "Tipo di elemento idrico"@it ,
+                                  "Water element type"@en ;
+                       owl:versionInfo "stabile"@it ,
+                                       "stable"@en ;
+                       a-cat:iccdNormTag "ICCD Normativa PG: FOTT + FOTG" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterSystem
+a-con:WaterSystem rdf:type owl:Class ;
+                  rdfs:subClassOf core:System ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty a-con:hasModeOfIrrigation ;
+                                    owl:allValuesFrom a-con:ModeOfIrrigation
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty a-con:hasWaterAvailability ;
+                                    owl:allValuesFrom a-con:WaterAvailability
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty a-con:hasWaterDistribution ;
+                                    owl:allValuesFrom a-con:WaterDistribution
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty a-con:hasWaterElement ;
+                                    owl:allValuesFrom a-con:WaterElement
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty core:hasType ;
+                                    owl:allValuesFrom a-con:WaterSystemType
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty core:description ;
+                                    owl:allValuesFrom rdfs:Literal
+                                  ] ;
+                  rdfs:comment "Questa classe rappresenta il sistema delle acque, inclusi elementi artificiali e naturali, di uno spazio (per es: una costruzione, un parco, un giardine, ecc)."@it ,
+                               "This class represents the water system of a construction."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                  rdfs:label "Impianto idrico"@it ,
+                             "Water system"@en ;
+                  owl:versionInfo "stabile"@it ,
+                                  "stable"@en ;
+                  a-cat:iccdNormTag "Normativa PG: CA/CAI, IM/IMP/IMPT" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WaterSystemType
+a-con:WaterSystemType rdf:type owl:Class ;
+                      rdfs:subClassOf core:Type ;
+                      rdfs:comment "Questa classe rappresenta l'impianto idrico di una costruzione (."@it ,
+                                   "This class represents the type of a water system."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                      rdfs:label "Tipo di impianto idrico"@it ,
+                                 "Water system type"@en ;
+                      owl:versionInfo "stabile"@it ,
+                                      "stable"@en ;
+                      a-cat:iccdNormTag "Normativa PG: CA/CAI" .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Window
+a-con:Window rdf:type owl:Class ;
+             rdfs:subClassOf a-con:OpeningElement ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:hasType ;
+                               owl:allValuesFrom a-con:WindowType
+                             ] ;
+             rdfs:comment "Questa classe rappresenta una finestra."@it ,
+                          "This class represents a window."@en ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Finestra"@it ,
+                        "Window"@en ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/WindowType
+a-con:WindowType rdf:type owl:Class ;
+                 rdfs:subClassOf a-con:ArchitecturalElementType ;
+                 rdfs:comment "Questa classe rappresenta il tipo di una finestra."@it ,
+                              "This class represents the type of a window."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                 rdfs:label "Tipo di finestra"@it ,
+                            "Window type"@en ;
+                 owl:versionInfo "stabile"@it ,
+                                 "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation
+a-cd:GraphicOrCartographicDocumentation rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/context-description/UseFunction
+a-cd:UseFunction rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Orientation
+a-dd:Orientation rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/Soil
+a-dd:Soil rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
+a-dd:TechnicalCharacteristic rdf:type owl:Class .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalConcept
+a-dd:TechnicalConcept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/arco/ontology/construction-description/Column
+a-con:Column rdf:type owl:NamedIndividual ,
+                      a-con:VerticalElementType ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Colonna"@it ,
+                        "Column"@en ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/HorizontalElementShape
+a-con:HorizontalElementShape rdf:type owl:NamedIndividual ,
+                                      a-dd:TechnicalConcept ;
+                             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                             rdfs:label "Forma dell'elemento orizzontale"@it ,
+                                        "Horizontal element shape"@en ;
+                             owl:versionInfo "stabile"@it ,
+                                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Pillar
+a-con:Pillar rdf:type owl:NamedIndividual ,
+                      a-con:VerticalElementType ;
+             rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+             rdfs:label "Pilastro"@en ,
+                        "Pillar"@it ;
+             owl:versionInfo "stabile"@it ,
+                             "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/RoofFrame
+a-con:RoofFrame rdf:type owl:NamedIndividual ,
+                         a-dd:TechnicalConcept .
+
+
+###  https://w3id.org/arco/ontology/construction-description/RoofShape
+a-con:RoofShape rdf:type owl:NamedIndividual ,
+                         a-dd:TechnicalConcept ;
+                rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                rdfs:label "Forma della copertura"@it ,
+                           "Roof shape"@en ;
+                owl:versionInfo "stabile"@it ,
+                                "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/VerticalConnectionShape
+a-con:VerticalConnectionShape rdf:type owl:NamedIndividual ,
+                                       a-dd:TechnicalConcept ;
+                              rdfs:label "Forma della connessione verticale"@it ,
+                                         "Vertical connection shape"@en ;
+                              owl:versionInfo "stabile"@it ,
+                                              "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/VerticalElementShape
+a-con:VerticalElementShape rdf:type owl:NamedIndividual ,
+                                    a-dd:TechnicalConcept ;
+                           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+                           rdfs:label "Forma dell'elemento verticale"@it ,
+                                      "Vertical element shape"@en ;
+                           owl:versionInfo "stabile"@it ,
+                                           "stable"@en .
+
+
+###  https://w3id.org/arco/ontology/construction-description/Wall
+a-con:Wall rdf:type owl:NamedIndividual ,
+                    a-con:VerticalElementType .
+
+
+###  https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75
+<https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dati.gov.it/onto/dcatapit#Agent> ,
+                                                                                 foaf:Agent ;
+                                                                        dct:identifier "ICCD" ;
+                                                                        foaf:name "Istituto Centrale per il Catalogo e la Documentazione"@en ,
+                                                                                  "Istituto Centrale per il Catalogo e la Documentazione"@it .
+
+
+###  https://w3id.org/arco/resource/contact-point/050ae5d29fc291b682bcf51f1250ca75
+<https://w3id.org/arco/resource/contact-point/050ae5d29fc291b682bcf51f1250ca75> rdf:type owl:NamedIndividual ,
+                                                                                         <http://dati.gov.it/onto/dcatapit#Organization> ,
+                                                                                         vcard:Kind ,
+                                                                                         vcard:Organization ;
+                                                                                vcard:fn "Punto di contatto ICCD" ;
+                                                                                vcard:hasEmail <mailto:iccd@iccd.it> .
+
+
+###  https://w3id.org/arco/resource/distribution/CON-RDF-RDF-XML
+<https://w3id.org/arco/resource/distribution/CON-RDF-RDF-XML> rdf:type owl:NamedIndividual ,
+                                                                       admsapit:SemanticAssetDistribution ;
+                                                              dct:description "Questa è la distribuzione RDF/XML dell'ontologia delle costruzioni"@it ,
+                                                                              "This is the distribution in RDF/XML of the construction ontology"@en ;
+                                                              dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+                                                              dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                              dct:title "Distribuzione RDF/XML ontologia Costruzioni"@it ,
+                                                                        "RDF/XML distribution of Costruction Ontology"@en ;
+                                                              dcat:accessURL <https://github.com/ICCD-MiBACT/ArCo4Construction/blob/main/assets/ontologies/construction-description/latest> ;
+                                                              dcat:downloadURL <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo4Construction/refs/heads/main/assets/ontologies/construction-description/latest/construction-description.rdf> .
+
+
+###  https://w3id.org/arco/resource/distribution/CON-RDF-TURTLE
+<https://w3id.org/arco/resource/distribution/CON-RDF-TURTLE> rdf:type owl:NamedIndividual ,
+                                                                      admsapit:SemanticAssetDistribution ;
+                                                             dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia delle costruzioni"@it ,
+                                                                             "This is the distribution in RDF/turtle of the construction ontology"@en ;
+                                                             dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+                                                             dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                             dct:title "Distribuzione RDF/Turtle ontologia Costruzioni"@it ,
+                                                                       "RDF/Turtle distribution of Construction Ontology"@en ;
+                                                             dcat:accessURL <https://github.com/ICCD-MiBACT/ArCo4Construction/blob/main/assets/ontologies/construction-description/latest> ;
+                                                             dcat:downloadURL <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo4Construction/refs/heads/main/assets/ontologies/construction-description/latest/construction-description.ttl> .
+
+
+###  https://w3id.org/arco/resource/private-organisation/13866741005
+<https://w3id.org/arco/resource/private-organisation/13866741005> rdf:type owl:NamedIndividual ,
+                                                                           <http://dati.gov.it/onto/dcatapit#Agent> ,
+                                                                           foaf:Agent ;
+                                                                  dct:identifier "13866741005" ;
+                                                                  foaf:name "BUP"@en ,
+                                                                            "BUP srl"@it .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+a-con:Wall rdfs:comment "Questa classe rappresenta un muro, un elemento verticale usato per definire e dividere gli spazi."@it ,
+                        "This class represents a wall, a vertical architectural element used to define and divide spaces."@en ;
+           rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
+           rdfs:label "Parete"@it ,
+                      "Wall"@en ;
+           owl:versionInfo "stabile"@it ,
+                           "stable"@en .
+
+
+a-cd:Herbarium owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( a-con:ArchitecturalElement
+                a-con:FurnishingElement
+                a-con:NaturalElement
+                a-con:TransportElement
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( a-con:ConnectionElementType
+                a-con:CoveringType
+                a-con:FoundationType
+                a-con:HorizontalElementType
+                a-con:RoofType
+                a-con:VerticalElementType
+                a-con:WaterSystemType
+                a-con:WindowType
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( a-con:Escalator
+                a-con:Lift
+                a-con:MovingWalkway
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
