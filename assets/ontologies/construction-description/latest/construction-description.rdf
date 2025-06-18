@@ -41,13 +41,8 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
-        <dct:creator>Aldo Gangemi (ISTC-CNR, STLab)</dct:creator>
-        <dct:creator>Margherita Porena (ISTC-CNR, STLab)</dct:creator>
-        <dct:creator>Maria Chiara Frangipane (ISTC-CNR, STLab)</dct:creator>
-        <dct:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dct:creator>
-        <dct:creator>Sara D&apos;Abate (Roma3)</dct:creator>
-        <dct:creator>Valentina Presutti (ISTC-CNR, STLab)</dct:creator>
-        <dct:creator rdf:resource="https://w3id.org/italia/health/data/private-organisation/13866741005"/>
+        <dct:creator rdf:resource="https://w3id.org/arco/resource/private-organisation/13866741005"/>
+        <dct:creator rdf:resource="https://w3id.org/arco/resource/Agent/050ae5d29fc291b682bcf51f1250ca75"/>
         <dct:description xml:lang="it">Questo è il modulo della descrizione delle costruzioni. Qui si modellano informazioni, relative al dominio dei beni architettonici. Vengono importati i moduli context description e denotative description.</dct:description>
         <dct:description xml:lang="en">This is the module for the description of constructions, related to architectural heritage domain.</dct:description>
         <dct:identifier>https://w3id.org/arco/ontology/construction-description</dct:identifier>
@@ -96,7 +91,7 @@ In this module the following Ontology Design Patterns have been used:
         <admsapit:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
         <admsapit:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/arco/ontology/construction-description</admsapit:officialURI>
         <admsapit:prefix>a-con</admsapit:prefix>
-        <admsapit:status>published</admsapit:status>
+        <admsapit:status>draft</admsapit:status>
         <admsapit:target xml:lang="it">Cittadini</admsapit:target>
         <admsapit:target xml:lang="it">Imprese</admsapit:target>
         <admsapit:target xml:lang="it">Pubbliche Amministrazioni</admsapit:target>
