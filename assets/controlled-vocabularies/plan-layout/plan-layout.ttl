@@ -1,0 +1,253 @@
+@prefix : <http://mapping.example.com/> .
+@prefix a-con: <https://w3id.org/arco/ontology/construction-description/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/imec/idlab/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix mailto: <mailto:> .
+@prefix ndc: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2000/01/XMLSchema#> .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout> a dcatapit:Dataset, skos:ConceptScheme,
+    adms:Asset, dcat:Dataset;
+  dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG>;
+  dc:conformsTo <http://dati.gov.it/data/resource/Standard/SKOS>;
+  dc:creator <https://w3id.org/arco/resource/private-organisation/13866741005>, <https://w3id.org/arco/resource/public-organisation/xxx>;
+  dc:description "This is the controlled vocabulary of plan layout types. The controlled vocabulary is created starting from ICCD's Ministry of Culture's documentation."@en,
+    "Questo è il vocabolario controllato del tipo di piante di una costruzione.  Il vocabolario controllato è ricavato dai documenti del Istututo Centrale del Catalogo e della Documentazione del Ministero della Cultura."@it;
+  dc:identifier <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  dc:issued "2025-06-05"^^xsd:date;
+  dc:language <http://publications.europa.eu/resource/authority/language/ITA>;
+  dc:modified "2025-06-16"^^xsd:date;
+  dc:publisher <https://w3id.org/italia/arco/resource/public-organisation/xxx>;
+  dc:rightsHolder <https://w3id.org/arco/resource/public-organisation/xxx>;
+  dc:title "Plan Layout Controlled Vocabulary"@en, "Vocabolario controllato del tipo di piante"@it;
+  dc:type <http://purl.org/adms/assettype/Taxonomy>;
+  xkos:numberOfLevels "4";
+  rdfs:comment "This is the controlled vocabulary of plan layout types. The controlled vocabulary is created starting from ICCD's Ministry of Culture's documentation."@en,
+    "Questo è il vocabolario controllato del tipo di piante di una costruzione.  Il vocabolario controllato è ricavato dai documenti del Istututo Centrale del Catalogo e della Documentazione del Ministero della Cultura."@it;
+  rdfs:isDefinedBy <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  rdfs:label "Plan Layout Controlled Vocabulary"@en, "Vocabolario controllato del tipo di piante"@it;
+  owl:versionInfo "Versione 1.0"@it;
+  skos:hasTopConcept <https://w3id.org/arco/controlled-vocabulary/plan-layout/1>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS>;
+  dcat:contactPoint <https://w3id.org/arco/resource/contact-point/xxx>;
+  dcat:distribution <https://w3id.org/arco/resource/distribution/planLayout-CSV>, <https://w3id.org/arco/resource/distribution/planLayout-RDF-TURTLE>;
+  dcat:keyword "architecture"@en, "architettura"@it, "pianta"@it;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  ndc:keyConcept "plan-layout" .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/1> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan longitudinal"@fr, "pianta longitudinale"@it;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/11>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/12>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/13>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/14>;
+  skos:prefLabel "plan longitudinal"@fr, "pianta longitudinale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/11> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan basilical"@fr, "pianta basilicale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/1>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "plan basilical"@fr, "pianta basilicale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/12> a skos:Concept, a-con:PlanLayout;
+  rdfs:label " plan en croix latine"@fr, "plan en croix latine"@fr, "pianta a croce latina"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/1>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/121>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/122>;
+  skos:prefLabel " plan en croix latine"@fr, "plan en croix latine"@fr, "pianta a croce latina"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/121> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta a croce latina commissa"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/12>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta a croce latina commissa"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/122> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta a croce latina immissa"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/12>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta a croce latina immissa"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/13> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta biassiale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/1>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta biassiale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/14> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta triassiale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/1>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta triassiale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/2> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan centré"@fr, "pianta centrale"@it;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/21>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/22>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/23>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/24>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/25>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/26>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/27>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/28>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/29>;
+  skos:prefLabel "plan centré"@fr, "pianta centrale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/21> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan en croix grecque"@fr, "pianta a croce greca"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/211>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/212>;
+  skos:prefLabel "plan en croix grecque"@fr, "pianta a croce greca"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/211> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta a croce greca"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/21>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta a croce greca"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/212> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan en croix grecque inscrite"@fr, "pianta a croce inscritta"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/21>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "plan en croix grecque inscrite"@fr, "pianta a croce inscritta"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/2121> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta a quinconce"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/212>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta a quinconce"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/22> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta quadrangolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/221>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/222>,
+    <https://w3id.org/arco/controlled-vocabulary/plan-layout/223>;
+  skos:prefLabel "pianta quadrangolare"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/221> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "plan rectangulaire"@fr, "pianta rettangolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/22>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "plan rectangulaire"@fr, "pianta rettangolare"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/222> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta quadrata"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/22>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta quadrata"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/223> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta trapezoidale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/22>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta trapezoidale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/23> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta poligonale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/231>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/232>;
+  skos:prefLabel "pianta poligonale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/231> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta poligonale regolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/23>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta poligonale regolare"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/232> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta poligonale irregolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/23>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta poligonale irregolare"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/24> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta triconca"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta triconca"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/25> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta quadriconca"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta quadriconca"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/26> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta circolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta circolare"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/27> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta ovale"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/271>;
+  skos:prefLabel "pianta ovale"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/271> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta ellittica ad asse traverso"@it, "pianta ovale ad asse traverso"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/27>, <https://w3id.org/arco/controlled-vocabulary/plan-layout/28>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta ellittica ad asse traverso"@it, "pianta ovale ad asse traverso"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/28> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta ellittica"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:narrower <https://w3id.org/arco/controlled-vocabulary/plan-layout/271>;
+  skos:prefLabel "pianta ellittica"@it .
+
+<https://w3id.org/arco/controlled-vocabulary/plan-layout/29> a skos:Concept, a-con:PlanLayout;
+  rdfs:label "pianta irregolare"@it;
+  skos:broader <https://w3id.org/arco/controlled-vocabulary/plan-layout/2>;
+  skos:inScheme <https://w3id.org/arco/controlled-vocabulary/plan-layout>;
+  skos:prefLabel "pianta irregolare"@it .
+
+<https://w3id.org/arco/resource/contact-point/xxx> a dcatapit:Organization, vcard:Kind,
+    vcard:Organization;
+  vcard:fn "Punto di contatto"@it;
+  vcard:hasEmail "mailto:xxx@iccd.it"^^xsd:anyURI .
+
+<https://w3id.org/arco/resource/distribution/planLayout-CSV> a dcatapit:Distribution,
+    dcat:Distribution;
+  dc:description "This is the distribution in CSV of the Linked Open Dataset of ICCD classification on the plan layout (architecture)"@en,
+    "Questa è la distribuzione CSV del dataset Linked Open Data della classificazione dell'ICCD delle tipologie di pianta (architettura)"@it;
+  dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40>;
+  dc:title "CSV distribution of plan layout"@en, "Distribuzione CSV tipologie di pianta"@it;
+  dcat:accessURL <https://github.com/ICCD-MiBACT/ArCo4Construction/tree/main/assets/controlled-vocabularies/plan-layout>;
+  dcat:downloadURL <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo4Construction/refs/heads/main/assets/controlled-vocabularies/plan-layout/plan-layout.csv> .
+
+<https://w3id.org/arco/resource/distribution/planLayout-RDF-TURTLE> a dcatapit:Distribution,
+    dcat:Distribution;
+  dc:description "This is the distribution in RDF/turtle of the Linked Open Dataset of ICCD classification on the plan layout (architecture)"@en,
+    "Questa è la distribuzione RDF/Turtle del dataset Linked Open Data della classificazione dell'ICCD delle tipologie di pianta (architettura)"@it;
+  dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40>;
+  dc:title "RDF/Turtle distribution of plan layout"@en, "Distribuzione RDF/Turtle tipologie di pianta"@it;
+  dcat:accessURL <https://github.com/ICCD-MiBACT/ArCo4Construction/tree/main/assets/controlled-vocabularies/plan-layout>;
+  dcat:downloadURL <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo4Construction/refs/heads/main/assets/controlled-vocabularies/plan-layout/plan-layout.ttl> .
+
+<https://w3id.org/arco/resource/private-organisation/13866741005> a dcatapit:Agent,
+    foaf:Agent;
+  dc:identifier "13866741005";
+  foaf:name "BUP"@en, "BUP srl"@it .
+
+<https://w3id.org/arco/resource/public-organisation/xxx> a dcatapit:Agent, foaf:Agent;
+  dc:identifier "xxx";
+  foaf:name "ICCD"@en, "ICCD"@it .
