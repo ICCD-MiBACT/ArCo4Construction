@@ -1177,10 +1177,10 @@ a-con:numberOfFlights rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/arco/ontology/construction-description/numberOfFloors
 a-con:numberOfFloors rdf:type owl:DatatypeProperty ;
-                     rdfs:domain a-con:Building ;
+                     rdfs:domain a-con:Construction ;
                      rdfs:range rdfs:Literal ;
-                     rdfs:comment "Questa proprietà rappresenta  il numero di piani di un edificio."@it ,
-                                  "This property represents the number of floors of a building."@en ;
+                     rdfs:comment "Questa proprietà rappresenta  il numero di piani di una costruzione."@it ,
+                                  "This property represents the number of floors of a construction."@en ;
                      rdfs:isDefinedBy <https://w3id.org/arco/ontology/construction-description> ;
                      rdfs:label "numbero of floors"@en ,
                                 "numero di piani"@it ;
